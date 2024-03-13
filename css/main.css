@@ -270,6 +270,7 @@ template {
 
 body {
     font-family: "Cereal", sans-serif;
+    background-color: #fbfafa;
 }
 
 html {
@@ -310,7 +311,7 @@ html {
 }
 
 .header {
-    background-color: #fffefe;
+    background-color: #fbfafa;
     border-bottom: 1px solid rgba(232, 233, 236, 1);
 }
 .topnav {
@@ -746,6 +747,7 @@ html {
     font-size: 18px;
     line-height: 1.2;
     margin-bottom: 20px;
+    opacity: 0.8;
 }
 .btn {
     background: none;
@@ -758,7 +760,8 @@ html {
     font-weight: 600;
     padding: 12px 20px;
     border-radius: 100px;
-    background-color: rgb(var(--color-2));
+    background-color: #fff;
+    border: 2px solid rgba(var(--color-1), 1);
     color: #000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     min-width: 100px;
@@ -768,17 +771,24 @@ html {
 }
 .btn-prim {
     background-color: rgb(var(--color-1));
+    border: none;
     color: #353535;
 }
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .btn:active {
     transform: scale(0.95);
 }
+.hero .btns {
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
 .hero .btn {
-    align-self: flex-start;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
 .hero .circle {
@@ -795,7 +805,7 @@ html {
     width: 100%;
     height: auto;
     border-radius: 100%;
-    box-shadow: 0 0 120px rgba(var(--color-1), 0.8);
+    box-shadow: 0 0 100px rgba(var(--color-1), 0.8);
 }
 .hero .cards {
     position: absolute;
@@ -816,7 +826,7 @@ html {
     padding: 12px 15px;
     border-radius: 20px;
     max-width: 60%;
-    box-shadow: 0 0 20px rgba(var(--color-1), 1);
+    box-shadow: 0 0 10px rgba(var(--color-1), 0.5);
     position: relative;
     transition:
         transform 0.3s ease,
@@ -824,7 +834,7 @@ html {
 }
 .hero .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(var(--color-1), 1);
+    box-shadow: 0 0 20px rgba(var(--color-1), 0.5);
 }
 .hero .card:nth-child(1) {
     align-self: flex-start;
