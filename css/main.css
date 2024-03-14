@@ -266,6 +266,7 @@ template {
     --color-2: 158, 216, 175;
     --color-3: 126, 176, 195;
     --color-4: 0, 119, 200;
+    --gradient-1: linear-gradient(90deg, rgb(var(--color-1)) 0%, rgb(var(--color-2)) 100%);
 }
 
 body {
@@ -720,7 +721,7 @@ html {
 
 .hero {
     display: block;
-    padding: 40px 0;
+    padding: 60px 0;
 }
 .hero-inner {
     display: flex;
@@ -728,12 +729,10 @@ html {
     justify-content: space-between;
 }
 .hero .content {
-    flex: 1 1 50%;
+    flex: 0 1 50%;
     display: flex;
     flex-direction: column;
     margin-right: 15px;
-    max-width: 480px;
-    width: 100%;
 }
 .hero .content h1 {
     font-size: 45px;
@@ -792,7 +791,7 @@ html {
     margin-bottom: 10px;
 }
 .hero .circle {
-    flex: 1 1 50%;
+    flex: 0 1 50%;
     margin: 0 40px 0 20px;
     position: relative;
 }
@@ -881,8 +880,13 @@ html {
     }
 }
 @media (max-width: 991.98px) {
+    .hero {
+        padding: 40px 0;
+    }
     .hero .content {
         flex: 1 1 55%;
+        max-width: 480px;
+        width: 100%;
     }
     .hero .circle {
         flex: 1 1 45%;
@@ -914,7 +918,7 @@ html {
 }
 @media (max-width: 767.98px) {
     .hero {
-        padding: 20px 0;
+        padding: 20px 0 40px 0;
     }
     .hero-inner {
         flex-direction: column;
@@ -993,8 +997,8 @@ html {
     }
 }
 .offer {
-    padding: 40px 0;
-    background: linear-gradient(90deg, rgb(var(--color-1)) 0%, rgb(var(--color-2)) 100%);
+    padding: 60px 0;
+    background: var(--gradient-1);
 }
 .offer-inner {
     display: block;
@@ -1004,13 +1008,13 @@ html {
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin: -15px;
+    margin: -20px;
 }
 .offer .item {
     width: 33.333%;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 20px;
 }
 .offer .item .icon {
     min-width: 60px;
@@ -1020,7 +1024,7 @@ html {
     background: rgb(77, 155, 185);
     padding: 12px;
     border-radius: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 .offer .item img {
     display: block;
@@ -1030,12 +1034,23 @@ html {
 .offer .item h2 {
     font-size: 21px;
     line-height: 1.2;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .offer .item p {
     opacity: 0.8;
 }
+@media (max-width: 1199.98px) {
+    .offer .list {
+        margin: -15px;
+    }
+    .offer .item {
+        padding: 15px;
+    }
+}
 @media (max-width: 991.98px) {
+    .offer {
+        padding: 40px 0;
+    }
     .offer .item {
         width: 50%;
     }
@@ -1294,6 +1309,7 @@ html {
     height: 100%;
     top: 0;
     left: 0;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 .office-list .swiper-button-prev,
@@ -1434,6 +1450,9 @@ html {
     }
 }
 @media (max-width: 991.98px) {
+    .office {
+        padding: 40px 0;
+    }
     .office-list .list {
         margin: -10px;
     }
@@ -1467,9 +1486,6 @@ html {
     }
 }
 @media (max-width: 767.98px) {
-    .office {
-        padding: 40px 0;
-    }
     .office-top h2 {
         font-size: 35px;
     }
@@ -1514,6 +1530,171 @@ html {
         width: 100%;
     }
     .office-filter .extra label {
+        width: 100%;
+    }
+}
+.advantage {
+    padding: 60px 0;
+    background: var(--gradient-1);
+}
+.advantage-inner {
+    display: block;
+}
+.advantage-inner > h2 {
+    font-size: 50px;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 80px;
+}
+.advantage .list {
+    counter-reset: advantage;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: -30px 10px;
+}
+.advantage .item {
+    counter-increment: advantage;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px;
+    font-size: 20px;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+}
+.advantage .item::before {
+    content: "0" counter(advantage);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translate(-5%, -25%);
+    font-size: 100px;
+    font-weight: 700;
+    opacity: 0.05;
+}
+.advantage .item:nth-child(n + 10)::before {
+    content: counter(advantage);
+}
+@media (max-width: 1199.98px) {
+    .advantage-inner > h2 {
+        font-size: 45px;
+    }
+}
+@media (max-width: 991.98px) {
+    .advantage .item {
+        width: 50%;
+    }
+}
+@media (max-width: 767.98px) {
+    .advantage-inner > h2 {
+        font-size: 40px;
+        margin-bottom: 60px;
+    }
+    .advantage {
+        padding: 40px 0;
+    }
+    .advantage .item {
+        width: 100%;
+    }
+    .advantage .item::before {
+        font-size: 80px;
+    }
+}
+@media (max-width: 599.98px) {
+    .advantage-inner > h2 {
+        font-size: 35px;
+    }
+    .advantage .list {
+        margin: -30px 10px;
+    }
+    .advantage .item {
+        padding: 30px 0 30px 25px;
+    }
+}
+
+.difference {
+    padding: 60px 0;
+}
+.difference-inner {
+    display: block;
+}
+.difference-inner > h2 {
+    font-size: 50px;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 60px;
+}
+.difference .list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: -20px;
+}
+.difference .item {
+    width: 33.333%;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+.difference .item::before {
+    content: "";
+    display: block;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/icons/mark.svg");
+    margin-top: -4px;
+    margin-right: 8px;
+}
+@media (max-width: 1199.98px) {
+    .difference-inner > h2 {
+        font-size: 45px;
+    }
+    .difference .list {
+        margin: -15px;
+    }
+    .difference .item {
+        padding: 15px;
+    }
+}
+@media (max-width: 991.98px) {
+    .difference {
+        padding: 40px 0;
+    }
+    .difference .item {
+        width: 50%;
+    }
+}
+@media (max-width: 767.98px) {
+    .difference-inner > h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    .difference {
+        padding: 40px 0;
+    }
+    .difference .list {
+        margin: -12px;
+    }
+    .difference .item {
+        padding: 12px;
+    }
+}
+@media (max-width: 599.98px) {
+    .difference-inner > h2 {
+        font-size: 35px;
+    }
+    .difference .item {
         width: 100%;
     }
 }
