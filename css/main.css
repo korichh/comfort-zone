@@ -1008,7 +1008,7 @@ html {
     margin: -15px;
 }
 .offer .item {
-    flex: 0 1 33.333%;
+    width: 33.333%;
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -1038,7 +1038,7 @@ html {
 }
 @media (max-width: 991.98px) {
     .offer .item {
-        flex: 0 1 50%;
+        width: 50%;
     }
 }
 @media (max-width: 767.98px) {
@@ -1051,7 +1051,7 @@ html {
 }
 @media (max-width: 599.98px) {
     .offer .item {
-        flex: 0 1 100%;
+        width: 100%;
         flex-direction: row;
     }
     .offer .item .icon {
@@ -1062,5 +1062,272 @@ html {
         padding: 10px;
         margin-bottom: 0;
         margin-right: 12px;
+    }
+}
+
+.office {
+    padding: 60px 0;
+}
+.office-inner {
+    display: block;
+}
+.office-inner > h2 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+.office-filter {
+    display: block;
+}
+.office-list {
+    display: block;
+}
+.office-list .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+.office-list .item {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+}
+.office-list .inner {
+    flex: 1 1 auto;
+    margin: 15px;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #ededed;
+    display: flex;
+    flex-direction: column;
+}
+.office-list .images {
+    position: relative;
+}
+.office-list .tour {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 15px;
+    background-color: #ededed;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    box-shadow: 2px 2px 0 0px #b4b4b4;
+    opacity: 0;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.office-list .inner:hover .tour {
+    opacity: 1;
+}
+.office-list .tour:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0 0px #b4b4b4;
+}
+.office-list .swiper {
+    width: 100%;
+}
+.office-list .swiper-wrapper {
+    width: 100%;
+}
+.office-list .swiper-slide {
+    width: 100%;
+    position: relative;
+}
+.office-list .swiper-slide::before {
+    content: "";
+    display: block;
+    padding-top: 70%;
+}
+.office-list .swiper-slide img {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.office-list .swiper-button-prev,
+.office-list .swiper-button-next {
+    user-select: none;
+    top: 50%;
+    transform: translateY(-50%);
+    left: unset;
+    right: unset;
+    bottom: unset;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    background: #ededed;
+    border-radius: 50%;
+    padding: 7px;
+    -webkit-tap-highlight-color: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.office-list .inner:hover .swiper-button-prev,
+.office-list .inner:hover .swiper-button-next {
+    opacity: 1;
+}
+.office-list .swiper-button-prev {
+    left: 10px;
+}
+.office-list .swiper-button-next {
+    right: 10px;
+}
+.office-list .swiper-button-prev::after,
+.office-list .swiper-button-next::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/icons/arrow.svg");
+}
+.office-list .swiper-button-next::after {
+    transform: rotate(180deg);
+}
+.office-list .swiper-pagination {
+    width: auto;
+    top: unset;
+    left: unset;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 7px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+.office-list .content {
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+.office-list .title {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+.office-list .features {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    margin-bottom: 10px;
+}
+.office-list .features > span {
+    width: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.office-list .features > span::before {
+    content: "";
+    display: block;
+    min-width: 22px;
+    min-height: 22px;
+    max-width: 22px;
+    max-width: 22px;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.office-list .square::before {
+    background-image: url("../img/icons/square.svg");
+}
+.office-list .capacity::before {
+    background-image: url("../img/icons/capacity.svg");
+}
+.office-list .chair::before {
+    background-image: url("../img/icons/chair.svg");
+}
+.office-list .projector::before {
+    background-image: url("../img/icons/projector.svg");
+}
+.office-list .table::before {
+    background-image: url("../img/icons/table.svg");
+}
+.office-list .price {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.office-list .btn {
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: auto;
+}
+@media (max-width: 1199.98px) {
+    .office-inner > h2 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 991.98px) {
+    .office-list .list {
+        margin: -10px;
+    }
+    .office-list .inner {
+        margin: 10px;
+    }
+    .office-list .content {
+        padding: 15px;
+    }
+    .office-list .title {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .office-list .features {
+        margin-bottom: 8px;
+    }
+    .office-list .features > span {
+        font-size: 14px;
+    }
+    .office-list .price {
+        font-size: 18px;
+        margin-bottom: 17px;
+    }
+}
+@media (max-width: 899.98px) {
+    .office-list .item {
+        width: 50%;
+    }
+}
+@media (max-width: 767.98px) {
+    .office {
+        padding: 40px 0;
+    }
+    .office-inner > h2 {
+        font-size: 35px;
+    }
+}
+@media (max-width: 599.98px) {
+    .office-list .item {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
     }
 }

@@ -1,5 +1,6 @@
 const main = function () {
     const mobile = document.querySelector('.mobile');
+    const office = document.querySelector('.office');
 
     if (mobile) {
         const openNav = () => {
@@ -15,5 +16,30 @@ const main = function () {
             if (e.target.closest('.burger')) openNav()
             else if (!e.target.closest('.mobile-inner') || e.target.closest('.mobile .close') || e.target.closest('.mobile .menu-item')) closeNav()
         })
+    }
+
+    if (office) {
+        const swiperSelectors = office.querySelectorAll('.swiper')
+        initSwiper(swiperSelectors)
+    }
+
+    function initSwiper(selectors) {
+        for (const selector of selectors) {
+            const next = selector.querySelector('.swiper-button-next')
+            const prev = selector.querySelector('.swiper-button-prev')
+            const pagination = selector.querySelector('.swiper-pagination')
+
+            const swiper = new Swiper(selector, {
+                loop: true,
+                pagination: {
+                    el: pagination,
+                    type: 'fraction'
+                },
+                navigation: {
+                    nextEl: next,
+                    prevEl: prev
+                }
+            })
+        }
     }
 }();
