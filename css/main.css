@@ -301,6 +301,28 @@ html {
     padding: 0 20px;
 }
 
+.go-top {
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    transition: transform 0.3s ease 0s;
+    transform: translateX(100%);
+}
+.go-top._active {
+    transform: translateX(0);
+}
+.go-top a {
+    display: block;
+    padding: 15px;
+    border: none;
+    background: none;
+}
+.go-top img {
+    width: 50px;
+    height: 50px;
+}
+
 @media (max-width: 991.98px) {
     .main {
         padding-top: 100px;
@@ -1612,6 +1634,7 @@ html {
         margin: -30px 10px;
     }
     .advantage .item {
+        font-size: 18px;
         padding: 30px 0 30px 25px;
     }
 }
@@ -1695,6 +1718,95 @@ html {
         font-size: 35px;
     }
     .difference .item {
+        font-size: 18px;
         width: 100%;
+    }
+}
+
+.footer {
+    padding: 40px 0;
+    font-size: 14px;
+}
+.footer a {
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-inner {
+    display: block;
+}
+.footer .top {
+    display: block;
+}
+.footer .caption {
+    display: block;
+    color: #737373;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.footer .top .row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: -5px -15px;
+}
+.footer .top .column {
+    width: 37.5%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.footer .top .column a {
+    display: block;
+    width: 50%;
+    padding: 6px;
+    color: #737373;
+}
+.footer .top .mail {
+    flex-direction: column;
+    width: 25%;
+}
+.footer .top .mail a {
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+}
+.footer .top .mail span {
+    padding: 6px;
+    color: #737373;
+}
+.footer .bottom {
+    display: block;
+    border-top: 1px solid rgba(232, 233, 236, 1);
+    padding-top: 40px;
+    margin-top: 40px;
+}
+.footer .copyright {
+    color: #737373;
+    margin-bottom: 10px;
+}
+.footer .bottom .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+}
+.footer .bottom .row a {
+    color: #737373;
+    padding: 5px;
+}
+
+@media (max-width: 991.98px) {
+    .footer .top .column {
+        width: 50%;
+    }
+}
+@media (max-width: 767.98px) {
+    .footer .top .column {
+        width: 100%;
+    }
+    .footer .bottom {
+        margin-top: 30px;
     }
 }

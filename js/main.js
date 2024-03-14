@@ -1,6 +1,22 @@
 const main = function () {
+    const goTop = document.querySelector('.go-top');
     const mobile = document.querySelector('.mobile');
     const office = document.querySelector('.office');
+
+    if (goTop) {
+        const checkScroll = () => {
+            if (scrollY > 40) {
+                if (!goTop.classList.contains('_active'))
+                    goTop.classList.add('_active')
+            } else {
+                if (goTop.classList.contains('_active'))
+                    goTop.classList.remove('_active')
+            }
+        }
+
+        document.addEventListener('scroll', checkScroll);
+        checkScroll();
+    }
 
     if (mobile) {
         const openNav = () => {
