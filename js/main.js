@@ -20,7 +20,12 @@ const main = function () {
 
     if (office) {
         const swiperSelectors = office.querySelectorAll('.swiper')
+        const filter = office.querySelector('.office-filter')
+
         initSwiper(swiperSelectors)
+
+        filter.addEventListener('click', (e) => { if (e.target.closest('.toggle')) filter.classList.toggle('_active') })
+        document.addEventListener('click', (e) => { if (!e.target.closest('.office-filter')) filter.classList.remove('_active') })
     }
 
     function initSwiper(selectors) {

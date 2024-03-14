@@ -1142,7 +1142,7 @@ html {
     flex-wrap: wrap;
     margin-top: 10px;
 }
-.office-filter:focus-within .filter {
+.office-filter._active .filter {
     transition-delay: 0s;
     opacity: 1;
     transform: translateY(0);
