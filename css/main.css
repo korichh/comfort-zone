@@ -992,7 +992,6 @@ html {
         left: 0;
     }
 }
-
 .offer {
     padding: 40px 0;
     background: linear-gradient(90deg, rgb(var(--color-1)) 0%, rgb(var(--color-2)) 100%);
@@ -1064,20 +1063,155 @@ html {
         margin-right: 12px;
     }
 }
-
 .office {
     padding: 60px 0;
 }
 .office-inner {
     display: block;
 }
-.office-inner > h2 {
-    font-size: 45px;
-    line-height: 1.2;
+.office-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
     margin-bottom: 30px;
 }
+.office-top h2 {
+    font-size: 45px;
+    line-height: 1.2;
+}
 .office-filter {
+    cursor: default;
+    background: none;
+    border: none;
+}
+.office-filter .toggle {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 10px 12px;
+}
+.office-filter .toggle::before {
+    content: "";
     display: block;
+    width: 17px;
+    height: 17px;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/icons/filter.svg");
+    margin-right: 5px;
+}
+.office-filter .filter {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid rgba(var(--color-1), 1);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition:
+        opacity 0.3s ease 0s,
+        transform 0.3s ease 0s,
+        visibility 0s ease 0.3s;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.office-filter:focus-within .filter {
+    transition-delay: 0s;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+.office-filter .filter > label {
+    display: flex;
+    flex-direction: column;
+    width: 33.333%;
+    padding: 5px;
+}
+.office-filter .filter > label span {
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+.custom-date {
+    position: relative;
+}
+.custom-date input[type="date"] {
+    appearance: none;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 36px;
+}
+.custom-time {
+    position: relative;
+}
+.custom-time input[type="time"] {
+    appearance: none;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 36px;
+}
+.custom-select {
+    position: relative;
+}
+.custom-select select {
+    appearance: none;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 36px;
+}
+.custom-input {
+    position: relative;
+}
+.custom-input input[type="text"] {
+    appearance: none;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 36px;
+}
+.office-filter .extra {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+.office-filter .extra .caption {
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+}
+.office-filter .extra label {
+    width: 33.333%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: left;
+}
+.office-filter .extra input {
+    min-width: 19px;
+    min-height: 19px;
+    max-width: 19px;
+    max-height: 19px;
+    margin-right: 5px;
+}
+.office-filter .extra span {
+    margin: 0;
 }
 .office-list {
     display: block;
@@ -1110,7 +1244,7 @@ html {
     z-index: 1;
     top: 15px;
     left: 15px;
-    background-color: #ededed;
+    background: #dddddd;
     padding: 8px 12px;
     border-radius: 5px;
     text-decoration: none;
@@ -1121,10 +1255,14 @@ html {
     transition:
         opacity 0.3s ease,
         transform 0.3s ease,
-        box-shadow 0.3s ease;
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
 }
 .office-list .inner:hover .tour {
     opacity: 1;
+}
+.office-list .tour:hover {
+    background: #ededed;
 }
 .office-list .tour:active {
     transform: translate(2px, 2px);
@@ -1166,16 +1304,22 @@ html {
     width: 35px;
     height: 35px;
     margin: 0;
-    background: #ededed;
+    background: #dddddd;
     border-radius: 50%;
     padding: 7px;
     -webkit-tap-highlight-color: transparent;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition:
+        opacity 0.3s ease,
+        background-color 0.3s ease;
 }
 .office-list .inner:hover .swiper-button-prev,
 .office-list .inner:hover .swiper-button-next {
     opacity: 1;
+}
+.office-list .swiper-button-prev:hover,
+.office-list .swiper-button-next:hover {
+    background: #ededed;
 }
 .office-list .swiper-button-prev {
     left: 10px;
@@ -1282,7 +1426,7 @@ html {
     margin-top: auto;
 }
 @media (max-width: 1199.98px) {
-    .office-inner > h2 {
+    .office-top h2 {
         font-size: 40px;
     }
 }
@@ -1320,14 +1464,50 @@ html {
     .office {
         padding: 40px 0;
     }
-    .office-inner > h2 {
+    .office-top h2 {
         font-size: 35px;
+    }
+    .office-filter .filter {
+        padding: 10px;
+    }
+    .office-filter .filter > label {
+        width: 50%;
     }
 }
 @media (max-width: 599.98px) {
+    .office-top h2 {
+        font-size: 30px;
+    }
+    .office-filter .toggle {
+        padding: 8px 13px 8px 10px;
+        font-size: 14px;
+    }
+    .office-filter .toggle::before {
+        width: 15px;
+        height: 15px;
+    }
+    .office-filter .extra label {
+        width: 50%;
+    }
+    .office-filter .extra input {
+        min-width: 16px;
+        min-height: 16px;
+        max-width: 16px;
+        max-height: 16px;
+        margin-right: 3px;
+        margin-top: 2px;
+    }
     .office-list .item {
         width: 100%;
         max-width: 450px;
         margin: 0 auto;
+    }
+}
+@media (max-width: 499.98px) {
+    .office-filter .filter > label {
+        width: 100%;
+    }
+    .office-filter .extra label {
+        width: 100%;
     }
 }
