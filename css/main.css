@@ -1143,6 +1143,9 @@ html {
     align-self: flex-start;
     margin-bottom: 5px;
 }
+.office-filter .filter > label input {
+    width: 100%;
+}
 .custom-date {
     position: relative;
 }
@@ -1436,6 +1439,9 @@ html {
     }
     .office-list .inner {
         margin: 10px;
+    }
+    .office-list .tour {
+        opacity: 1;
     }
     .office-list .content {
         padding: 15px;
