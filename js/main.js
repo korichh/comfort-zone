@@ -2,6 +2,7 @@ const main = function () {
     const goTop = document.querySelector('.go-top');
     const mobile = document.querySelector('.mobile');
     const office = document.querySelector('.office');
+    const apartment = document.querySelector('.apartment');
 
     if (goTop) {
         const checkScroll = () => {
@@ -38,17 +39,49 @@ const main = function () {
         const swiperSelectors = office.querySelectorAll('.swiper')
         const filter = office.querySelector('.office-filter')
 
-        initSwiper(swiperSelectors)
+        initOfficeSwiper(swiperSelectors)
 
         filter.addEventListener('click', (e) => { if (e.target.closest('.toggle')) filter.classList.toggle('_active') })
         document.addEventListener('click', (e) => { if (!e.target.closest('.office-filter')) filter.classList.remove('_active') })
     }
 
-    function initSwiper(selectors) {
+    if (apartment) {
+        const swiperSelector = apartment.querySelector('.images .swiper-top')
+        const swiperPagination = swiperSelector.querySelector('.swiper-pagination')
+        const swiperNext = swiperSelector.querySelector('.swiper-button-next')
+        const swiperPrev = swiperSelector.querySelector('.swiper-button-prev')
+        const thumbsSelector = apartment.querySelector('.images .swiper-thumbs')
+        const officeSwiperSelectors = apartment.querySelectorAll('.office-list .swiper')
+
+        const thumbs = new Swiper(thumbsSelector, {
+            spaceBetween: 25,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        })
+
+        const swiper = new Swiper(swiperSelector, {
+            pagination: {
+                el: swiperPagination,
+                type: 'fraction'
+            },
+            navigation: {
+                nextEl: swiperNext,
+                prevEl: swiperPrev,
+            },
+            thumbs: {
+                swiper: thumbs,
+            },
+        })
+
+        initOfficeSwiper(officeSwiperSelectors)
+    }
+
+    function initOfficeSwiper(selectors) {
         for (const selector of selectors) {
+            const pagination = selector.querySelector('.swiper-pagination')
             const next = selector.querySelector('.swiper-button-next')
             const prev = selector.querySelector('.swiper-button-prev')
-            const pagination = selector.querySelector('.swiper-pagination')
 
             const swiper = new Swiper(selector, {
                 loop: true,
