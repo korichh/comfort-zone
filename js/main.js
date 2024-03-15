@@ -54,10 +54,20 @@ const main = function () {
         const officeSwiperSelectors = apartment.querySelectorAll('.office-list .swiper')
 
         const thumbs = new Swiper(thumbsSelector, {
-            spaceBetween: 25,
-            slidesPerView: 4,
+            spaceBetween: 15,
+            slidesPerView: 2,
             freeMode: true,
             watchSlidesProgress: true,
+            breakpoints: {
+                499.98: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                767.98: {
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                }
+            }
         })
 
         const swiper = new Swiper(swiperSelector, {

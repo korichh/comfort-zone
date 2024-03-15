@@ -528,6 +528,14 @@ html {
         font-size: 32px;
     }
 }
+@media (max-width: 499.98px) {
+    .btn-tour {
+        top: 12px;
+        left: 12px;
+        padding: 7px 11px;
+        font-size: 14px;
+    }
+}
 
 .header {
     background-color: #fbfafa;
@@ -1508,7 +1516,7 @@ html {
 .office-list .swiper-slide::before {
     content: "";
     display: block;
-    padding-top: 70%;
+    padding-top: 65%;
 }
 .office-list .swiper-slide img {
     display: block;
@@ -1605,6 +1613,9 @@ html {
     }
     .office-filter .filter > label {
         width: 50%;
+    }
+    .office-list .inner {
+        border-radius: 15px;
     }
 }
 @media (max-width: 599.98px) {
@@ -1897,7 +1908,7 @@ html {
 .apartment .swiper-top .swiper-slide::before {
     content: "";
     display: block;
-    padding-top: 60%;
+    padding-top: 65%;
 }
 .apartment .swiper-top .swiper-slide img {
     position: absolute;
@@ -1945,7 +1956,7 @@ html {
 .apartment .swiper-thumbs .swiper-slide::before {
     content: "";
     display: block;
-    padding-top: 60%;
+    padding-top: 65%;
 }
 .apartment .swiper-thumbs .swiper-slide img {
     position: absolute;
@@ -1961,8 +1972,8 @@ html {
     font-size: 40px;
     line-height: 1.2;
 }
-.apartment h2 {
-    font-size: 26px;
+.apartment .column h2 {
+    font-size: 20px;
     line-height: 1.2;
     margin-bottom: 15px;
 }
@@ -1972,58 +1983,78 @@ html {
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
-.apartment .top .features,
-.apartment .top .facilities {
-    padding: 10px 0;
+.apartment .column > .features,
+.apartment .column > .facilities,
+.apartment .column > .tags {
+    padding: 5px 0;
 }
-.apartment .top .price {
+.apartment .column > .features li,
+.apartment .column > .facilities li,
+.apartment .column > .tags li {
+    color: rgba(0, 0, 0, 0.8);
+}
+.apartment .bottom .column > .features li,
+.apartment .bottom .column > .facilities li {
+    width: 33.333%;
+}
+.apartment .column > .price {
     margin-bottom: 0 !important;
     margin-top: 15px;
+    font-size: 28px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
-.apartment .top .schedule {
-    font-size: 14px;
+.apartment .column .schedule {
     width: 100%;
-    color: #000;
-    margin-bottom: 12px;
+    margin: 15px 0;
+    font-size: 14px;
+    overflow-x: auto;
+}
+.apartment .column .schedule table {
     text-align: left;
     border: none;
     border-collapse: collapse;
+    width: 100%;
+    color: #000;
+    min-width: 450px;
 }
-.apartment .top .schedule th,
-.apartment .top .schedule td {
-    padding: 8px 4px;
+.apartment .column .schedule th,
+.apartment .column .schedule td {
+    padding: 8px 10px;
 }
-.apartment .top .schedule th {
+.apartment .column .schedule th {
     font-weight: 400;
     opacity: 0.8;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: rgba(0, 0, 0, 0.03);
 }
-.apartment .top .tags {
+.apartment .column .schedule tr:not(:last-child) td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+.apartment .column .tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     margin: -4px -8px;
 }
-.apartment .top .tags a {
+.apartment .column .tags a {
     display: inline-block;
     color: #000;
     text-decoration: none;
-    opacity: 0.9;
     padding: 4px 8px;
 }
-.apartment .top .tags a::before {
+.apartment .column .tags a::before {
     content: "#";
     font-size: 18px;
     font-weight: 600;
     padding-right: 2px;
     color: rgb(91, 206, 193);
 }
-.apartment .top .tags a:hover {
+.apartment .column .tags a:hover {
     text-decoration: underline;
 }
 .apartment .bottom h2 {
-    margin-bottom: 20px;
+    font-size: 28px;
 }
 .apartment .section:not(:last-child) {
     margin-bottom: 40px;
@@ -2031,8 +2062,65 @@ html {
 .apartment .section p {
     opacity: 0.8;
 }
+@media (max-width: 1199.98px) {
+    .apartment .top .images {
+        padding-right: 20px;
+    }
+    .apartment .top .content {
+        padding-left: 20px;
+    }
+}
 @media (max-width: 991.98px) {
+    .apartment {
+        padding: 20px 0 40px;
+    }
+    .apartment .top {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .apartment .top .images {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+    .apartment .top .content {
+        width: 100%;
+        padding-left: 0;
+    }
     .apartment .btn-tour {
         opacity: 1;
+    }
+    .apartment .top .column {
+        border-bottom: 1px solid rgb(225, 226, 228);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .apartment .bottom h2 {
+        font-size: 20px;
+    }
+    .apartment .column > .features li,
+    .apartment .column > .facilities li {
+        width: 33.333%;
+    }
+}
+@media (max-width: 767.98px) {
+    .apartment h1 {
+        font-size: 35px;
+    }
+    .apartment .column > .price {
+        font-size: 24px;
+    }
+    .apartment .swiper-top {
+        margin-bottom: 15px;
+    }
+    .apartment .column > .features li,
+    .apartment .column > .facilities li {
+        width: 50% !important;
+    }
+}
+@media (max-width: 499.98px) {
+    .apartment .column > .features li,
+    .apartment .column > .facilities li {
+        width: 100% !important;
     }
 }
