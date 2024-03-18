@@ -381,10 +381,10 @@ html {
     color: #fff;
     font-size: 14px;
 }
-.btn-tour-cnt {
+.images {
     position: relative;
 }
-.btn-tour {
+.images .btn-tour {
     position: absolute;
     z-index: 1;
     top: 15px;
@@ -404,10 +404,10 @@ html {
         box-shadow 0.3s ease,
         background-color 0.3s ease;
 }
-.btn-tour:hover {
+.images .btn-tour:hover {
     background: #e8e8e8;
 }
-.btn-tour:active {
+.images .btn-tour:active {
     transform: translate(2px, 2px);
     box-shadow: 0px 0px 0 0px #c2c2c2;
 }
@@ -534,7 +534,7 @@ html {
     .main {
         padding-top: 80px;
     }
-    .btn-tour {
+    .images .btn-tour {
         top: 12px;
         left: 12px;
         padding: 8px 13px;
