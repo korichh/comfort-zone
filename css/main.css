@@ -337,7 +337,7 @@ html {
     width: 35px;
     height: 35px;
     margin: 0;
-    background: #dddddd;
+    background: #f8f8f8;
     border-radius: 50%;
     padding: 7px;
     -webkit-tap-highlight-color: transparent;
@@ -347,7 +347,7 @@ html {
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background: #ededed;
+    background: #e8e8e8;
 }
 .swiper-button-prev {
     left: 10px;
@@ -389,13 +389,14 @@ html {
     z-index: 1;
     top: 15px;
     left: 15px;
-    background: #dddddd;
-    padding: 8px 12px;
+    background: #f8f8f8;
+    padding: 8px 14px;
     border-radius: 5px;
     text-decoration: none;
+    font-size: 17px;
     font-weight: 600;
     color: #000;
-    box-shadow: 2px 2px 0 0px #b4b4b4;
+    box-shadow: 2px 2px 0 0px #c2c2c2;
     transition:
         opacity 0.3s ease,
         transform 0.3s ease,
@@ -403,11 +404,11 @@ html {
         background-color 0.3s ease;
 }
 .btn-tour:hover {
-    background: #ededed;
+    background: #e8e8e8;
 }
 .btn-tour:active {
     transform: translate(2px, 2px);
-    box-shadow: 0px 0px 0 0px #b4b4b4;
+    box-shadow: 0px 0px 0 0px #c2c2c2;
 }
 .apartment-features {
     display: flex;
@@ -529,11 +530,14 @@ html {
     }
 }
 @media (max-width: 499.98px) {
+    .main {
+        padding-top: 80px;
+    }
     .btn-tour {
         top: 12px;
         left: 12px;
-        padding: 7px 11px;
-        font-size: 14px;
+        padding: 8px 13px;
+        font-size: 15px;
     }
 }
 
@@ -937,6 +941,32 @@ html {
         display: block;
         width: 100%;
         height: 100%;
+    }
+}
+@media (max-width: 499.98px) {
+    .topnav-inner {
+        justify-content: flex-end;
+        text-align: right;
+        position: relative;
+        z-index: 2;
+    }
+    .navbar {
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+    }
+    .navbar .container {
+        width: 100%;
+    }
+    .header .logo {
+        position: absolute;
+        z-index: 1;
+        top: 8px;
+        left: 5px;
+        width: auto;
+    }
+    .header .logo img {
+        max-width: 180px;
     }
 }
 @media (max-width: 399.98px) {
@@ -1920,20 +1950,6 @@ html {
     -o-object-fit: cover;
     object-fit: cover;
 }
-.apartment .swiper-button-prev,
-.apartment .swiper-button-next,
-.apartment .btn-tour {
-    opacity: 0;
-}
-.apartment .top .images:hover .swiper-button-prev,
-.apartment .top .images:hover .swiper-button-next,
-.apartment .top .images:hover .btn-tour {
-    opacity: 1;
-}
-.apartment .top .images:hover .swiper-button-prev.swiper-button-disabled,
-.apartment .top .images:hover .swiper-button-next.swiper-button-disabled {
-    opacity: 0.4;
-}
 .apartment .swiper-thumbs {
     width: 100%;
 }
@@ -1967,6 +1983,10 @@ html {
     left: 0;
     -o-object-fit: cover;
     object-fit: cover;
+}
+.apartment .top .btn-tour {
+    padding: 9px 16px;
+    font-size: 18px;
 }
 .apartment h1 {
     font-size: 40px;
@@ -2105,9 +2125,6 @@ html {
         width: 100%;
         padding-left: 0;
     }
-    .apartment .btn-tour {
-        opacity: 1;
-    }
     .apartment .top .column {
         border-bottom: 1px solid rgb(225, 226, 228);
         padding-bottom: 20px;
@@ -2134,6 +2151,10 @@ html {
     .apartment .swiper-top {
         margin-bottom: 15px;
     }
+    .apartment .top .btn-tour {
+        padding: 8px 14px;
+        font-size: 17px;
+    }
     .apartment .column > .features li,
     .apartment .column > .facilities li {
         width: 50% !important;
@@ -2149,8 +2170,23 @@ html {
         padding: 5px;
     }
 }
+@media (max-width: 599.98px) {
+    .apartment .swiper-thumbs {
+        display: none;
+    }
+    .apartment .swiper-top {
+        margin-bottom: 0;
+    }
+    .apartment .top .images {
+        padding-bottom: 25px;
+    }
+}
 @media (max-width: 499.98px) {
-    .apartment .column > .features li,
+    .apartment .top .btn-tour {
+        padding: 8px 13px;
+        font-size: 15px;
+    }
+    .apartment .column > .features:not(.features-mobile) li,
     .apartment .column > .facilities li {
         width: 100% !important;
     }
