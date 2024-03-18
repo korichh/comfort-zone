@@ -1,6 +1,7 @@
 const main = function () {
     const goTop = document.querySelector('.go-top');
     const mobile = document.querySelector('.mobile');
+    const popup = document.querySelector('.popup');
     const office = document.querySelector('.office');
     const apartment = document.querySelector('.apartment');
 
@@ -31,7 +32,22 @@ const main = function () {
 
         document.addEventListener('click', (e) => {
             if (e.target.closest('.burger')) openNav()
-            else if (!e.target.closest('.mobile-inner') || e.target.closest('.mobile .close') || e.target.closest('.mobile .menu-item')) closeNav()
+            else if (mobile.classList.contains('_active') && (!e.target.closest('.mobile-inner') || e.target.closest('.mobile .close') || e.target.closest('.mobile .menu-item'))) closeNav()
+        })
+    }
+
+    if (popup) {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.btn-tour')) {
+                popup.classList.add('_active')
+                document.body.classList.add('_lock')
+            }
+        })
+        popup.addEventListener('click', (e) => {
+            if (popup.classList.contains('_active') && (!e.target.closest('.popup-inner') || e.target.closest('.popup .close'))) {
+                popup.classList.remove('_active')
+                document.body.classList.remove('_lock')
+            }
         })
     }
 
@@ -54,7 +70,7 @@ const main = function () {
         const officeSwiperSelectors = apartment.querySelectorAll('.office-list .swiper')
 
         const thumbs = new Swiper(thumbsSelector, {
-            spaceBetween: 10,
+            spaceBetween: 15,
             slidesPerView: 3,
             freeMode: true,
             watchSlidesProgress: true,
