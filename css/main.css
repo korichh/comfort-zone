@@ -390,6 +390,7 @@ html {
     top: 15px;
     left: 15px;
     background: #f8f8f8;
+    border: none;
     padding: 8px 14px;
     border-radius: 5px;
     text-decoration: none;

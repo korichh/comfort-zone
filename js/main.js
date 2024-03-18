@@ -39,13 +39,21 @@ const main = function () {
     if (popup) {
         document.addEventListener('click', (e) => {
             if (e.target.closest('.btn-tour')) {
-                e.preventDefault()
+                const popupBody = popup.querySelector('.popup-body')
+                const btnTour = e.target.closest('.btn-tour')
+                const iframe = document.createElement('iframe')
+                iframe.setAttribute('src', btnTour.getAttribute('data-tour'))
+                popupBody.insertAdjacentElement('afterbegin', iframe)
+
                 popup.classList.add('_active')
                 document.body.classList.add('_lock')
             }
         })
         popup.addEventListener('click', (e) => {
             if (popup.classList.contains('_active') && (!e.target.closest('.popup-inner') || e.target.closest('.popup .close'))) {
+                const iframe = popup.querySelector('.popup iframe')
+                iframe.remove()
+
                 popup.classList.remove('_active')
                 document.body.classList.remove('_lock')
             }
