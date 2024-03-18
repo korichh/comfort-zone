@@ -39,6 +39,7 @@ const main = function () {
     if (popup) {
         document.addEventListener('click', (e) => {
             if (e.target.closest('.btn-tour')) {
+                e.preventDefault()
                 popup.classList.add('_active')
                 document.body.classList.add('_lock')
             }
