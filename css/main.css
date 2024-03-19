@@ -267,6 +267,7 @@ template {
     --color-3: 126, 176, 195;
     --color-4: 0, 119, 200;
     --gradient-1: linear-gradient(90deg, rgb(var(--color-1)) 0%, rgb(var(--color-2)) 100%);
+    --gradient-2: linear-gradient(145deg, rgb(var(--color-1)) 0%, rgb(var(--color-2)) 100%);
 }
 
 body {
@@ -326,8 +327,8 @@ html {
     font-size: 47px;
     line-height: 1.2;
 }
-.swiper-button-prev,
-.swiper-button-next {
+.apartment-swiper .swiper-button-prev,
+.apartment-swiper .swiper-button-next {
     user-select: none;
     top: 50%;
     transform: translateY(-50%);
@@ -345,18 +346,18 @@ html {
         opacity 0.3s ease,
         background-color 0.3s ease;
 }
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
+.apartment-swiper .swiper-button-prev:hover,
+.apartment-swiper .swiper-button-next:hover {
     background: #e8e8e8;
 }
-.swiper-button-prev {
+.apartment-swiper .swiper-button-prev {
     left: 10px;
 }
-.swiper-button-next {
+.apartment-swiper .swiper-button-next {
     right: 10px;
 }
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.apartment-swiper .swiper-button-prev::after,
+.apartment-swiper .swiper-button-next::after {
     content: "";
     display: block;
     width: 100%;
@@ -366,10 +367,10 @@ html {
     background-repeat: no-repeat;
     background-image: url("../img/icons/arrow.svg");
 }
-.swiper-button-next::after {
+.apartment-swiper .swiper-button-next::after {
     transform: rotate(180deg);
 }
-.swiper-pagination {
+.apartment-swiper .swiper-pagination {
     width: auto;
     top: unset;
     left: unset;
@@ -1993,9 +1994,6 @@ html {
     font-size: 40px;
     line-height: 1.2;
 }
-.apartment .bottom .columns {
-    margin-bottom: 30px;
-}
 .apartment .column h2 {
     font-size: 18px;
     line-height: 1.2;
@@ -2273,5 +2271,146 @@ html {
     }
     .popup .title {
         font-size: 20px;
+    }
+}
+
+.calendar {
+    padding: 60px 0;
+    background: var(--gradient-2);
+}
+.calendar-inner {
+    display: block;
+}
+.calendar .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.calendar .switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.calendar .switch button {
+    background: none;
+    border: none;
+    width: 50%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.calendar .switch button._active {
+    background: #fff;
+}
+.calendar .date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.calendar .date span {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+.calendar .date input {
+    width: 100%;
+}
+.calendar-swiper {
+}
+.calendar .swiper {
+}
+.calendar .swiper-wrapper {
+}
+.calendar .swiper-slide {
+}
+.calendar .prev,
+.calendar .next {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.2;
+    user-select: none;
+}
+.calendar .swiper-button-prev,
+.calendar .swiper-button-next {
+    position: static;
+    transform: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.calendar .swiper-button-prev.swiper-button-lock,
+.calendar .swiper-button-next.swiper-button-lock {
+    display: block;
+}
+.calendar .prev {
+    left: 0;
+}
+.calendar .next {
+    right: 0;
+    flex-direction: row-reverse;
+}
+.calendar .swiper-button-prev {
+    margin-right: 10px;
+}
+.calendar .swiper-button-next {
+    margin-left: 10px;
+}
+.calendar-body {
+}
+.calendar-body .content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.calendar-body .title {
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-bottom: 5px;
+}
+.calendar-body .day {
+}
+.calendar-body .grid {
+}
+.calendar-body .head,
+.calendar-body .body {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
+.calendar-body .body {
+}
+.calendar-body .column {
+    width: 16.666%;
+}
+.calendar-body .column li,
+.calendar-body .column button {
+    width: 100%;
+}
+.calendar-body .column li {
+}
+.calendar-body .column button {
+}
+@media (max-width: 991.98px) {
+    .calendar {
+        padding: 40px 0;
     }
 }

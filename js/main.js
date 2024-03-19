@@ -4,6 +4,7 @@ const main = function () {
     const popup = document.querySelector('.popup');
     const office = document.querySelector('.office');
     const apartment = document.querySelector('.apartment');
+    const calendar = document.querySelector('.calendar');
 
     if (goTop) {
         const checkScroll = () => {
@@ -63,13 +64,15 @@ const main = function () {
     }
 
     if (office) {
-        const swiperSelectors = office.querySelectorAll('.swiper')
+        const swiperSelectors = office.querySelectorAll('.office-list .swiper')
         const filter = office.querySelector('.office-filter')
 
         initOfficeSwiper(swiperSelectors)
 
-        filter.addEventListener('click', (e) => { if (e.target.closest('.toggle')) filter.classList.toggle('_active') })
-        document.addEventListener('click', (e) => { if (!e.target.closest('.office-filter')) filter.classList.remove('_active') })
+        if (filter) {
+            filter.addEventListener('click', (e) => { if (e.target.closest('.toggle')) filter.classList.toggle('_active') })
+            document.addEventListener('click', (e) => { if (!e.target.closest('.office-filter')) filter.classList.remove('_active') })
+        }
     }
 
     if (apartment) {
@@ -78,7 +81,6 @@ const main = function () {
         const swiperNext = swiperSelector.querySelector('.swiper-button-next')
         const swiperPrev = swiperSelector.querySelector('.swiper-button-prev')
         const thumbsSelector = apartment.querySelector('.images .swiper-thumbs')
-        const officeSwiperSelectors = apartment.querySelectorAll('.office-list .swiper')
 
         const thumbs = new Swiper(thumbsSelector, {
             spaceBetween: 15,
@@ -106,8 +108,36 @@ const main = function () {
                 swiper: thumbs,
             },
         })
+    }
 
-        initOfficeSwiper(officeSwiperSelectors)
+    if (calendar) {
+        const swiperSelector = calendar.querySelector('.calendar-swiper .swiper')
+        const swiperNext = swiperSelector.querySelector('.swiper-button-next')
+        const swiperPrev = swiperSelector.querySelector('.swiper-button-prev')
+
+        const swiper = new Swiper(swiperSelector, {
+            navigation: {
+                nextEl: swiperNext,
+                prevEl: swiperPrev,
+            },
+            enabled: true,
+            spaceBetween: 0,
+            slidesPerView: 1,
+            breakpoints: {
+                991.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                }
+            }
+        })
+
+        calendar.addEventListener('click', (e) => {
+            if (e.target.closest('.switch button')) {
+                const btns = e.target.closest('.switch').querySelectorAll('button')
+                for (const btn of btns) btn.classList.remove('_active')
+                e.target.closest('.switch button').classList.add('_active')
+            }
+        })
     }
 
     function initOfficeSwiper(selectors) {
