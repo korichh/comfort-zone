@@ -114,6 +114,7 @@ const main = function () {
         const swiperSelector = calendar.querySelector('.calendar-swiper .swiper')
         const swiperNext = swiperSelector.querySelector('.swiper-button-next')
         const swiperPrev = swiperSelector.querySelector('.swiper-button-prev')
+        const wWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
         const swiper = new Swiper(swiperSelector, {
             navigation: {
@@ -121,7 +122,7 @@ const main = function () {
                 prevEl: swiperPrev,
             },
             enabled: true,
-            spaceBetween: 0,
+            spaceBetween: 10,
             slidesPerView: 1,
             breakpoints: {
                 991.98: {
@@ -138,6 +139,30 @@ const main = function () {
                 e.target.closest('.switch button').classList.add('_active')
             }
         })
+
+        if (wWidth > 992) {
+            const calendarSwiper = calendar.querySelector('.calendar-swiper')
+            const tooltip = calendar.querySelector('.tooltip')
+
+            calendarSwiper.addEventListener('mouseover', (e) => {
+                if (e.target.closest('.grid span') || e.target.closest('.grid button[data-disabled]')) {
+                    const target = e.target.closest('.grid span') || e.target.closest('.grid button[data-disabled]')
+                    const top = target.getBoundingClientRect().top + target.offsetHeight
+                    const left = target.getBoundingClientRect().left + (target.offsetWidth / 2)
+
+                    tooltip.textContent = target.getAttribute('data-title').trim()
+                    tooltip.classList.add('_active')
+                    tooltip.style.top = `${top}px`
+                    tooltip.style.left = `${left}px`
+                }
+            })
+
+            calendarSwiper.addEventListener('mouseout', (e) => {
+                if (e.target.closest('.grid span') || e.target.closest('.grid button[data-disabled]')) {
+                    tooltip.classList.remove('_active')
+                }
+            })
+        }
     }
 
     function initOfficeSwiper(selectors) {
