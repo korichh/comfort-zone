@@ -8,9 +8,13 @@
 
     <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/flatpickr.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script defer src="js/swiper.js"></script>
+    <script defer src="js/flatpickr.js"></script>
+    <script defer src="js/flatpickr-ru.js"></script>
+    <script defer src="js/flatpickr-uk.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 
@@ -33,7 +37,7 @@
                     <button aria-label="close mobile" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
                 </div>
                 <ul class="menu">
-                    <li class="menu-item"><a href="#kabinet">Кабинеты</a></li>
+                    <li class="menu-item"><a href="#office">Кабинеты</a></li>
                     <li class="menu-item"><a href="/price">Цены и оплата</a></li>
                     <li class="menu-item"><a href="/booking">Расписание</a></li>
                     <li class="menu-item"><a href="/rules">Правила</a></li>
@@ -54,12 +58,67 @@
                 </div>
             </div>
         </nav>
+        <section class="action booking">
+            <div class="action-inner">
+                <div class="top">
+                    <h2 class="title">Забронировать кабинет</h2>
+                    <button aria-label="close booking" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
+                </div>
+                <form class="form">
+                    <div class="inputs">
+                        <label for="kabinet" class="kabinet custom-select">
+                            <span>Выбранный кабинет:</span>
+                            <select id="kabinet" name="kabinet">
+                                <option value="kabinet1">Кабинет 1</option>
+                                <option value="kabinet2">Кабинет 2</option>
+                                <option value="kabinet3">Кабинет 3</option>
+                                <option value="kabinet4">Кабинет 4</option>
+                                <option value="kabinet5">Кабинет 5</option>
+                                <option value="kabinet6">Кабинет 6</option>
+                            </select>
+                            <span class="input-nav"><span>Ул. Шевченка 69</span><a href="apartment.html">Перейти</a></span>
+                        </label>
+                        <label for="booking-date" class="date custom-date">
+                            <span>Выбранная дата:</span>
+                            <input type="text" id="booking-date" name="date" data-locale="ru">
+                        </label>
+                        <label for="booking-time" class="time custom-time">
+                            <span>Выбранное время:</span>
+                            <input type="text" id="booking-time" name="time" data-locale="ru">
+                        </label>
+                    </div>
+                    <div class="summary">
+                        <span class="price-caption">Стоимость:</span>
+                        <h2 class="price">500 грн</h2>
+                        <div class="btns">
+                            <button type="submit" class="btn btn-prim">Забронировать</button>
+                            <button type="reset" class="btn">Отмена</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="action profile">
+            <div class="action-inner">
+                <div class="top">
+                    <button aria-label="close booking" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
+                </div>
+                <div class="content">
+                    <div class="avatar"><img src="img/icons/profile.svg" alt="icon profile" loading="lazy" width="100" height="100"></div>
+                    <div class="username">user@name</div>
+                    <ul class="links">
+                        <li><a href="#">Мои бронирования</a></li>
+                        <li><a href="#">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <header class="header">
             <nav class="topnav">
                 <div class="container">
                     <div class="topnav-inner">
                         <div class="left">
-                            <span><a href="https://www.360expert.kyiv.ua/temp/office_03_all/index_ru.html" target="_blank" class="address">Киев, ул. Елены Телиги, 25, оф. 1, 2</a></span>
+                            <span><a href="https://www.360expert.kyiv.ua/temp/office_03_all/index.html" target="_blank" class="address">Киев, ул. Елены Телиги, 25, оф. 1, 2</a></span>
                             <button class="select-lang">
                                 <span>Русский</span>
                                 <ul class="list">
@@ -75,7 +134,7 @@
                             <span><a href="#" class="instagram"></a></span>
                             <span><a href="#" class="fmessenger"></a></span>
                             <span><a href="#" class="orders">Мои заказы</a></span>
-                            <span><a href="#" class="profile">Личный кабинет</a></span>
+                            <span><a href="#" class="profile" data-profile>Личный кабинет</a></span>
                         </div>
                     </div>
                 </div>
@@ -88,14 +147,14 @@
                         </div>
                         <div class="right">
                             <ul class="menu">
-                                <li class="menu-item"><a href="#kabinet">Кабинеты</a></li>
+                                <li class="menu-item"><a href="#office">Кабинеты</a></li>
                                 <li class="menu-item"><a href="/price">Цены и оплата</a></li>
                                 <li class="menu-item"><a href="/booking">Расписание</a></li>
                                 <li class="menu-item"><a href="/rules">Правила</a></li>
                                 <li class="menu-item"><a href="/about">О нас</a></li>
                                 <li class="menu-item"><a href="/about">Контакты</a></li>
                             </ul>
-                            <a aria-label="go to profile page" href="#" class="profile"></a>
+                            <a aria-label="go to profile page" href="#" class="profile" data-profile></a>
                             <button aria-label="open mobile" class="burger"><img src="img/icons/burger.svg" alt="icon burger" loading="lazy" width="40" height="40"></button>
                         </div>
                     </div>
@@ -111,7 +170,7 @@
                             <span>— почасово и долгосрочно</span>
                             <p>Наши кабинеты подойдут для проведения индивидуальных и групповых психологических консультаций, семинаров, вебинаров, тренингов, репетиторства, сеансов мануальной и телесно-ориентированной терапии.</p>
                             <div class="btns">
-                                <a class="btn btn-prim" href="#kabinet">Смотреть кабинеты</a>
+                                <a class="btn btn-prim" href="#office">Смотреть кабинеты</a>
                                 <button data-tour="360-tour/index.html" class="btn btn-tour">3D тур</button>
                             </div>
                         </div>
@@ -184,7 +243,7 @@
                     </div>
                 </div>
             </section>
-            <section id="kabinet" class="office">
+            <section id="office" class="office">
                 <div class="container">
                     <div class="office-inner">
                         <div class="office-top">
@@ -203,11 +262,11 @@
                                     </label>
                                     <label for="date" class="date custom-date">
                                         <span>Дата:</span>
-                                        <input type="date" id="date" name="date">
+                                        <input type="text" id="date" name="date" data-locale="ru">
                                     </label>
                                     <label for="time" class="time custom-time">
                                         <span>Время начала:</span>
-                                        <input type="time" id="time" name="time">
+                                        <input type="text" id="time" name="time" data-locale="ru">
                                     </label>
                                     <label for="length" class="length custom-input">
                                         <span>Длина:</span>

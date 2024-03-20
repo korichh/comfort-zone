@@ -1,0 +1,11 @@
+<svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 3L26 3V0.753911C26 0.33725 25.9162 0 25.5 0C25.0838 0 25 0.337249 25 0.753911V3L7 3V0.753911C7 0.337249 6.91666 0 6.5 0C6.08334 0 6 0.33725 6 0.753911V3L2.5 3C1.12336 3 0.5 3.62336 0.5 5V27C0.5 28.3761 1.12336 29 2.5 29H29.7986C31.1747 29 32 28.2409 32 26.8648V5C32 3.62336 31.3761 3 30 3ZM2.5 4H6V6.27153C6 6.68819 6.08334 7 6.5 7C6.91666 7 7 6.6882 7 6.27153V4L25 4V6.27153C25 6.6882 25.0838 7 25.5 7C25.9162 7 26 6.68819 26 6.27153V4L30 4C30.5453 4 31 4.45467 31 5V9L1.5 9V5C1.5 4.45467 1.95467 4 2.5 4ZM30 28L2.5 28C1.95467 28 1.5 27.5453 1.5 27V10H31V27C31 27.5453 30.5453 28 30 28Z" fill="black"/>
+<rect x="3.45" y="13.45" width="4.1" height="4.1" rx="0.55" stroke="black" stroke-width="0.9"/>
+<rect x="3.45" y="20.45" width="4.1" height="4.1" rx="0.55" stroke="black" stroke-width="0.9"/>
+<rect x="10.45" y="13.45" width="4.1" height="4.1" rx="0.55" stroke="black" stroke-width="0.9"/>
+<rect x="10.45" y="20.45" width="4.1" height="4.1" rx="0.55" stroke="black" stroke-width="0.9"/>
+<rect x="17.45" y="13.45" width="4.1" height="4.1" rx="0.55" stroke="black" stroke-width="0.9"/>
+<rect x="17.45" y="20.45" width="4.1" height="4.1" rx="0.55" stroke="black" stroke-width="0.9"/>
+<rect x="24.45" y="13.45" width="4.1" height="4.1" rx="0.55" stroke="black" stroke-width="0.9"/>
+<rect x="24.45" y="20.45" width="4.1" height="4.1" rx="0.55" stroke="black" stroke-width="0.9"/>
+</svg>
