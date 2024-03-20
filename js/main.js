@@ -142,9 +142,11 @@ const main = function () {
         const wWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         const dateInput = calendar.querySelector('#date')
         const booking = document.querySelector('.action.booking')
+        const bookingDateInput = booking.querySelector('#booking-date')
 
         initCalendarSwiper(swiperSelector)
         initPicker(dateInput)
+        initPicker(bookingDateInput)
 
         calendar.addEventListener('click', (e) => {
             if (e.target.closest('.switch button')) {
