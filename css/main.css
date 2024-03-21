@@ -1434,6 +1434,7 @@ html {
 }
 .office-filter .filter > label input {
     width: 100%;
+    background-color: #fff !important;
 }
 .custom-date {
     position: relative;
@@ -2291,7 +2292,7 @@ html {
     text-align: center;
     margin-bottom: 40px;
 }
-.calendar .switch {
+.calendar .tab-nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2304,7 +2305,7 @@ html {
     overflow: hidden;
     margin-bottom: 20px;
 }
-.calendar .switch button {
+.calendar .tab-nav button {
     background: none;
     border: none;
     width: 50%;
@@ -2314,8 +2315,14 @@ html {
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
-.calendar .switch button._active {
+.calendar .tab-nav button._active {
     background: #fff;
+}
+.calendar .tab-content {
+    display: none;
+}
+.calendar .tab-content._active {
+    display: block;
 }
 .calendar .date {
     display: flex;
@@ -2339,6 +2346,7 @@ html {
     border: 1px solid #ccc;
     border-radius: 4px;
     height: 36px;
+    background-color: #fff !important;
 
     background-position: 10px 45%;
     background-size: 20px 20px;
@@ -2595,12 +2603,12 @@ html {
     .calendar .title {
         margin-bottom: 30px;
     }
-    .calendar .switch {
+    .calendar .tab-nav {
         height: 44px;
         max-width: 350px;
         margin-bottom: 15px;
     }
-    .calendar .switch button {
+    .calendar .tab-nav button {
         font-size: 16px;
     }
     .calendar .date {
@@ -2622,7 +2630,7 @@ html {
     .calendar .title {
         margin-bottom: 25px;
     }
-    .calendar .switch {
+    .calendar .tab-nav {
         height: 40px;
         max-width: 320px;
         margin-bottom: 12px;
@@ -2667,10 +2675,6 @@ html {
     }
 }
 
-.booking {
-}
-.profile {
-}
 .action {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -2764,6 +2768,11 @@ html {
     margin-bottom: 8px;
     font-size: 16px;
     line-height: 1.2;
+}
+.action .form label > input,
+.action .form label > select {
+    width: 100%;
+    background-color: #fff !important;
 }
 .action .form .input-nav {
     display: flex;

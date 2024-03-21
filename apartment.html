@@ -301,169 +301,357 @@
                     <div class="calendar-inner">
                         <div class="tooltip"></div>
                         <h2 class="title title-main">Забронировать кабинет</h2>
-                        <div class="switch">
-                            <button class="_active">Все кабинеты</button>
-                            <button>Кабинет 1.1</button>
-                        </div>
-                        <label for="date" class="date">
-                            <span>Перейти к дате</span>
-                            <input type="text" id="date" name="date" data-locale="ru">
-                        </label>
-                        <div class="calendar-swiper">
-                            <div class="swiper apartment-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="calendar-body">
-                                            <div class="content">
-                                                <h3 class="title">Сегодня, Пн</h3>
-                                                <p class="day">18.03</p>
-                                            </div>
-                                            <div class="grid">
-                                                <div class="head">
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 1</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 2</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 3</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 4</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 5</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 6</span></li>
-                                                    </ul>
+                        <div class="calendar-tab tab">
+                            <div class="tab-nav">
+                                <button class="_active" data-for="all">Все кабинеты</button>
+                                <button data-for="single">Кабинет 1.1</button>
+                            </div>
+                            <label for="date" class="date">
+                                <span>Перейти к дате</span>
+                                <input type="text" id="date" name="date" data-locale="ru">
+                            </label>
+                            <div data-id="all" class="tab-content _active">
+                                <div class="calendar-swiper">
+                                    <div class="swiper apartment-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="calendar-body">
+                                                    <div class="content">
+                                                        <h3 class="title">Сегодня, Пн</h3>
+                                                        <p class="day">18.03</p>
+                                                    </div>
+                                                    <div class="grid">
+                                                        <div class="head">
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 1</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 2</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 3</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 4</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 5</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 6</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="body">
+                                                            <ul class="column">
+                                                                <li><button data-disabled data-empty data-title="Время не доступно"></button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button data-disabled data-empty data-title="Время не доступно"></button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="body">
-                                                    <ul class="column">
-                                                        <li><button data-disabled data-empty data-title="Время не доступно"></button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button data-disabled data-empty data-title="Время не доступно"></button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                    </ul>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="calendar-body">
+                                                    <div class="content">
+                                                        <h3 class="title">Завтра, ВТ</h3>
+                                                        <p class="day">19.03</p>
+                                                    </div>
+                                                    <div class="grid">
+                                                        <div class="head">
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 1</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 2</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 3</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 4</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 5</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span data-title="Ул. Шевченка 86">Кабинет 6</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="body">
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button data-disabled data-title="Закрыто">Не работает</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="calendar-body">
-                                            <div class="content">
-                                                <h3 class="title">Завтра, ВТ</h3>
-                                                <p class="day">19.03</p>
-                                            </div>
-                                            <div class="grid">
-                                                <div class="head">
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 1</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 2</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 3</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 4</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 5</span></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><span data-title="Ул. Шевченка 86">Кабинет 6</span></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="body">
-                                                    <ul class="column">
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button data-disabled data-title="Закрыто">Не работает</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                    </ul>
-                                                    <ul class="column">
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button>8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                        <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                        <div class="prev">
+                                            <div class="swiper-button-prev"></div>
+                                            <span>Суббота<br>17.03</span>
+                                        </div>
+                                        <div class="next">
+                                            <div class="swiper-button-next"></div>
+                                            <span>Среда<br>20.03</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="prev">
-                                    <div class="swiper-button-prev"></div>
-                                    <span>Суббота<br>17.03</span>
-                                </div>
-                                <div class="next">
-                                    <div class="swiper-button-next"></div>
-                                    <span>Среда<br>20.03</span>
+                            </div>
+                            <div data-id="single" class="tab-content">
+                                <div class="calendar-swiper">
+                                    <div class="swiper apartment-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="calendar-body">
+                                                    <div class="content">
+                                                        <h3 class="title">Кабинет 1.1</h3>
+                                                        <p class="day">18.03 - 24.03</p>
+                                                    </div>
+                                                    <div class="grid">
+                                                        <div class="head">
+                                                            <ul class="column">
+                                                                <li><span>Пн (18.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Вт (19.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Ср (20.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Чт (21.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Пт (22.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Сб (23.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Вс (24.03)</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="body">
+                                                            <ul class="column">
+                                                                <li><button data-disabled data-empty data-title="Время не доступно"></button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button data-disabled data-empty data-title="Время не доступно"></button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="calendar-body">
+                                                    <div class="content">
+                                                        <h3 class="title">Кабинет 1.1</h3>
+                                                        <p class="day">24.03 - 30.03</p>
+                                                    </div>
+                                                    <div class="grid">
+                                                        <div class="head">
+                                                            <ul class="column">
+                                                                <li><span>Пн (24.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Вт (25.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Ср (26.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Чт (27.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Пт (28.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Сб (29.03)</span></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><span>Вс (30.03)</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="body">
+                                                            <ul class="column">
+                                                                <li><button data-disabled data-empty data-title="Время не доступно"></button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button data-disabled data-empty data-title="Время не доступно"></button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                            </ul>
+                                                            <ul class="column">
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                                <li><button data-disabled data-title="Время забронировано">8:00-9:00</button></li>
+                                                                <li><button>8:00-9:00</button></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prev">
+                                            <div class="swiper-button-prev"></div>
+                                            <span>12.03-<br>18.03</span>
+                                        </div>
+                                        <div class="next">
+                                            <div class="swiper-button-next"></div>
+                                            <span>30.03-<br>05.03</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

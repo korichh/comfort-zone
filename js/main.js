@@ -138,24 +138,31 @@ const main = function () {
     }
 
     if (calendar) {
-        const swiperSelector = calendar.querySelector('.calendar-swiper .swiper')
+        const swiperSelectors = calendar.querySelectorAll('.swiper')
         const wWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         const dateInput = calendar.querySelector('#date')
         const booking = document.querySelector('.action.booking')
         const bookingDateInput = booking.querySelector('#booking-date')
 
-        initCalendarSwiper(swiperSelector)
+        initCalendarSwiper(swiperSelectors)
         initPicker(dateInput)
         initPicker(bookingDateInput)
 
         calendar.addEventListener('click', (e) => {
-            if (e.target.closest('.switch button')) {
-                const btns = e.target.closest('.switch').querySelectorAll('button')
-                for (const btn of btns) btn.classList.remove('_active')
-                e.target.closest('.switch button').classList.add('_active')
-            } else if (e.target.closest('.grid button:not([data-disabled])')) {
+            if (e.target.closest('.grid button:not([data-disabled])')) {
                 booking.classList.add('_active')
                 document.body.classList.add('_lock')
+            } else if (e.target.closest('.tab-nav button')) {
+                const tab = e.target.closest('.tab')
+                const curBtn = e.target.closest('.tab-nav button')
+                const curCnt = tab.querySelector(`[data-id="${curBtn.getAttribute('data-for')}"]`)
+                const tabBtns = tab.querySelectorAll('.tab-nav button')
+                const tabCnts = tab.querySelectorAll('.tab-content')
+
+                for (const btn of tabBtns) btn.classList.remove('_active')
+                for (const cnt of tabCnts) cnt.classList.remove('_active')
+                curBtn.classList.add('_active')
+                curCnt.classList.add('_active')
             }
         })
 
@@ -172,10 +179,12 @@ const main = function () {
             calendar.addEventListener('mouseover', (e) => {
                 if (e.target.closest('.grid span') || e.target.closest('.grid button[data-disabled]')) {
                     const target = e.target.closest('.grid span') || e.target.closest('.grid button[data-disabled]')
+                    const title = target.getAttribute('data-title')
+                    if (!title) return
                     const top = target.getBoundingClientRect().top + target.offsetHeight
                     const left = target.getBoundingClientRect().left + (target.offsetWidth / 2)
 
-                    tooltip.textContent = target.getAttribute('data-title').trim()
+                    tooltip.textContent = title.trim()
                     tooltip.classList.add('_active')
                     tooltip.style.top = `${top}px`
                     tooltip.style.left = `${left}px`
@@ -191,7 +200,7 @@ const main = function () {
     }
 
     function initOfficeSwiper(selectors) {
-        for (const selector of selectors) {
+        selectors.forEach(selector => {
             const pagination = selector.querySelector('.swiper-pagination')
             const next = selector.querySelector('.swiper-button-next')
             const prev = selector.querySelector('.swiper-button-prev')
@@ -207,27 +216,29 @@ const main = function () {
                     prevEl: prev
                 }
             })
-        }
+        })
     }
 
-    function initCalendarSwiper(selector) {
-        const next = selector.querySelector('.swiper-button-next')
-        const prev = selector.querySelector('.swiper-button-prev')
+    function initCalendarSwiper(selectors) {
+        selectors.forEach(selector => {
+            const next = selector.querySelector('.swiper-button-next')
+            const prev = selector.querySelector('.swiper-button-prev')
 
-        const swiper = new Swiper(selector, {
-            navigation: {
-                nextEl: next,
-                prevEl: prev,
-            },
-            enabled: true,
-            spaceBetween: 10,
-            slidesPerView: 1,
-            breakpoints: {
-                991.98: {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
+            return new Swiper(selector, {
+                navigation: {
+                    nextEl: next,
+                    prevEl: prev,
+                },
+                enabled: true,
+                spaceBetween: 10,
+                slidesPerView: 1,
+                breakpoints: {
+                    991.98: {
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                    }
                 }
-            }
+            })
         })
     }
 
