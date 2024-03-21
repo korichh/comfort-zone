@@ -1432,7 +1432,8 @@ html {
     align-self: flex-start;
     margin-bottom: 5px;
 }
-.office-filter .filter > label input {
+.office-filter .filter > label input,
+.office-filter .filter > label select {
     width: 100%;
     background-color: #fff !important;
 }
