@@ -2801,6 +2801,7 @@ html {
     font-size: 36px;
     line-height: 1.2;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 .action .form .btns {
     display: flex;
