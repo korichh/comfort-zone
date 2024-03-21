@@ -38,11 +38,11 @@
                 </div>
                 <ul class="menu">
                     <li class="menu-item"><a href="#office">Кабинеты</a></li>
-                    <li class="menu-item"><a href="/price">Цены и оплата</a></li>
-                    <li class="menu-item"><a href="/booking">Расписание</a></li>
-                    <li class="menu-item"><a href="/rules">Правила</a></li>
-                    <li class="menu-item"><a href="/about">О нас</a></li>
-                    <li class="menu-item"><a href="/about">Контакты</a></li>
+                    <li class="menu-item"><a href="content.html">Цены и оплата</a></li>
+                    <li class="menu-item"><a href="content.html">Расписание</a></li>
+                    <li class="menu-item"><a href="content.html">Правила</a></li>
+                    <li class="menu-item"><a href="content.html">О нас</a></li>
+                    <li class="menu-item"><a href="content.html">Контакты</a></li>
                 </ul>
                 <a href="tel:+380630205225" class="phone">+38 (063) 020-52-25</a>
                 <div class="social">
@@ -58,12 +58,59 @@
                 </div>
             </div>
         </nav>
-        <section class="action profile">
+        <section class="action booking">
             <div class="action-inner">
-                <div class="top">
+                <div class="action-top">
+                    <h2 class="title">Забронировать кабинет</h2>
                     <button aria-label="close booking" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
                 </div>
-                <div class="content">
+                <form class="action-form">
+                    <div class="inputs">
+                        <label for="kabinet" class="kabinet custom-select">
+                            <span>Выбранный кабинет:</span>
+                            <select id="kabinet" name="kabinet">
+                                <option value="kabinet1">Кабинет 1</option>
+                                <option value="kabinet2">Кабинет 2</option>
+                                <option value="kabinet3">Кабинет 3</option>
+                                <option value="kabinet4">Кабинет 4</option>
+                                <option value="kabinet5">Кабинет 5</option>
+                                <option value="kabinet6">Кабинет 6</option>
+                            </select>
+                            <span class="input-nav"><span>Ул. Шевченка 69</span><a href="apartment.html">Перейти</a></span>
+                        </label>
+                        <label for="booking-date" class="date custom-date">
+                            <span>Выбранная дата:</span>
+                            <input type="text" id="booking-date" name="booking-date" data-locale="ru">
+                        </label>
+                        <label for="booking-time" class="time custom-select">
+                            <span>Выбранное время:</span>
+                            <select id="booking-time" name="booking-time">
+                                <option value="8:00-9:00">8:00-9:00</option>
+                                <option value="8:00-9:00">8:00-9:00</option>
+                                <option value="8:00-9:00">8:00-9:00</option>
+                                <option value="8:00-9:00">8:00-9:00</option>
+                                <option value="8:00-9:00">8:00-9:00</option>
+                                <option value="8:00-9:00">8:00-9:00</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="summary">
+                        <span class="price-caption">Стоимость:</span>
+                        <h2 class="price">500 грн</h2>
+                        <div class="btns">
+                            <button type="submit" class="btn btn-prim">Забронировать</button>
+                            <button type="reset" class="btn">Отмена</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="action profile">
+            <div class="action-inner">
+                <div class="action-top">
+                    <button aria-label="close booking" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
+                </div>
+                <div class="action-content">
                     <div class="avatar"><img src="img/icons/profile.svg" alt="icon profile" loading="lazy" width="100" height="100"></div>
                     <div class="username">user@name</div>
                     <ul class="links">
@@ -108,11 +155,11 @@
                         <div class="right">
                             <ul class="menu">
                                 <li class="menu-item"><a href="#office">Кабинеты</a></li>
-                                <li class="menu-item"><a href="/price">Цены и оплата</a></li>
-                                <li class="menu-item"><a href="/booking">Расписание</a></li>
-                                <li class="menu-item"><a href="/rules">Правила</a></li>
-                                <li class="menu-item"><a href="/about">О нас</a></li>
-                                <li class="menu-item"><a href="/about">Контакты</a></li>
+                                <li class="menu-item"><a href="content.html">Цены и оплата</a></li>
+                                <li class="menu-item"><a href="content.html">Расписание</a></li>
+                                <li class="menu-item"><a href="content.html">Правила</a></li>
+                                <li class="menu-item"><a href="content.html">О нас</a></li>
+                                <li class="menu-item"><a href="content.html">Контакты</a></li>
                             </ul>
                             <a aria-label="go to profile page" href="#" class="profile" data-profile></a>
                             <button aria-label="open mobile" class="burger"><img src="img/icons/burger.svg" alt="icon burger" loading="lazy" width="40" height="40"></button>
@@ -125,7 +172,7 @@
             <section class="hero">
                 <div class="container">
                     <div class="hero-inner">
-                        <div class="content">
+                        <div class="hero-content">
                             <h1>Аренда кабинета психолога в Киеве</h1>
                             <span>— почасово и долгосрочно</span>
                             <p>Наши кабинеты подойдут для проведения индивидуальных и групповых психологических консультаций, семинаров, вебинаров, тренингов, репетиторства, сеансов мануальной и телесно-ориентированной терапии.</p>
@@ -134,7 +181,7 @@
                                 <button data-tour="360-tour/index.html" class="btn btn-tour">3D тур</button>
                             </div>
                         </div>
-                        <div class="circle">
+                        <div class="hero-circle">
                             <div class="image">
                                 <picture>
                                     <source srcset="img/hero/image.webp 1600w,img/hero/image-1200.webp 1200w,img/hero/image-768.webp 768w">
@@ -165,36 +212,36 @@
                     <div class="offer-inner">
                         <ul class="list">
                             <li class="item">
-                                <div class="icon"><img src="img/offer/room.webp" alt="icon room" loading="lazy" width="100" height="100"></div>
-                                <div class="content">
+                                <div class="offer-icon"><img src="img/offer/room.webp" alt="icon room" loading="lazy" width="100" height="100"></div>
+                                <div class="offer-content">
                                     <h3>6 уютных кабинетов</h3>
                                     <p>Площадью от 9 до 21 м² с современным дизайном, продуманным до мелочей зонированием пространства и всеми необходимыми в работе вещами.</p>
                                 </div>
                             </li>
                             <li class="item">
-                                <div class="icon"><img src="img/offer/sound.webp" alt="icon sound isolation" loading="lazy" width="100" height="100"></div>
-                                <div class="content">
+                                <div class="offer-icon"><img src="img/offer/sound.webp" alt="icon sound isolation" loading="lazy" width="100" height="100"></div>
+                                <div class="offer-content">
                                     <h3>Звукоизоляция «А» класса</h3>
                                     <p>Все стены имеют шумоизоляцию класса «A» с максимальным взвешенным коэффициентом звукопоглощения, а двери в каждый кабинет оснащены звукоизоляционным дверным порогом.</p>
                                 </div>
                             </li>
                             <li class="item">
-                                <div class="icon"><img src="img/offer/booking.webp" alt="icon booking" loading="lazy" width="100" height="100"></div>
-                                <div class="content">
+                                <div class="offer-icon"><img src="img/offer/booking.webp" alt="icon booking" loading="lazy" width="100" height="100"></div>
+                                <div class="offer-content">
                                     <h3>Удобная система бронирования</h3>
                                     <p>Выбирайте удобный формат бронирования кабинетов: самостоятельно онлайн, по телефону через администратора или мессенджер. В календаре показаны свободные интервалы времени.</p>
                                 </div>
                             </li>
                             <li class="item">
-                                <div class="icon"><img src="img/offer/key.webp" alt="icon key" loading="lazy" width="100" height="100"></div>
-                                <div class="content">
+                                <div class="offer-icon"><img src="img/offer/key.webp" alt="icon key" loading="lazy" width="100" height="100"></div>
+                                <div class="offer-content">
                                     <h3>Бесключевой доступ</h3>
                                     <p>Вход в кабинеты — по коду, который мы пришлём вам в смс / мессенджер после оплаты бронирования.</p>
                                 </div>
                             </li>
                             <li class="item">
-                                <div class="icon"><img src="img/offer/discount.webp" alt="icon discount" loading="lazy" width="100" height="100"></div>
-                                <div class="content">
+                                <div class="offer-icon"><img src="img/offer/discount.webp" alt="icon discount" loading="lazy" width="100" height="100"></div>
+                                <div class="offer-content">
                                     <h3>Гибкое расписание и система скидок</h3>
                                     <p>Доступна почасовая аренда кабинета психолога или посуточная / понедельная / помесячная аренда помещений на постоянной основе по более выгодным ценам.</p>
                                 </div>
@@ -268,7 +315,7 @@
                             <ul class="list">
                                 <li class="item">
                                     <div class="inner">
-                                        <div class="images">
+                                        <div class="office-images apartment-images">
                                             <div class="swiper apartment-swiper">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide"><img src="img/office/Кабинет 1.1_01.webp" alt="office" loading="lazy" width="500" height="271"></div>
@@ -281,7 +328,7 @@
                                             </div>
                                             <button data-tour="360-tour/index.html" class="btn-tour">3D-тур</button>
                                         </div>
-                                        <a href="apartment.html" class="content">
+                                        <a href="apartment.html" class="office-content">
                                             <h3 class="title">Название кабинета</h3>
                                             <ul class="features apartment-features">
                                                 <li class="square">10 м2</li>
@@ -296,7 +343,7 @@
                                 </li>
                                 <li class="item">
                                     <div class="inner">
-                                        <div class="images">
+                                        <div class="office-images apartment-images">
                                             <div class="swiper apartment-swiper">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide"><img src="img/office/Кабинет 1.2_01.webp" alt="office" loading="lazy" width="500" height="271"></div>
@@ -308,7 +355,7 @@
                                             </div>
                                             <button data-tour="360-tour/index.html" class="btn-tour">3D-тур</button>
                                         </div>
-                                        <a href="apartment.html" class="content">
+                                        <a href="apartment.html" class="office-content">
                                             <h3 class="title">Название кабинета</h3>
                                             <ul class="features apartment-features">
                                                 <li class="square">8 м2</li>
@@ -322,7 +369,7 @@
                                 </li>
                                 <li class="item">
                                     <div class="inner">
-                                        <div class="images">
+                                        <div class="office-images apartment-images">
                                             <div class="swiper apartment-swiper">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide"><img src="img/office/Кабинет 2.1_01.webp" alt="office" loading="lazy" width="500" height="271"></div>
@@ -335,7 +382,7 @@
                                             </div>
                                             <button data-tour="360-tour/index.html" class="btn-tour">3D-тур</button>
                                         </div>
-                                        <a href="apartment.html" class="content">
+                                        <a href="apartment.html" class="office-content">
                                             <h3 class="title">Название кабинета</h3>
                                             <ul class="features apartment-features">
                                                 <li class="square">8 м2</li>
@@ -350,7 +397,7 @@
                                 </li>
                                 <li class="item">
                                     <div class="inner">
-                                        <div class="images">
+                                        <div class="office-images apartment-images">
                                             <div class="swiper apartment-swiper">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide"><img src="img/office/Кабинет 1.1_01.webp" alt="office" loading="lazy" width="500" height="271"></div>
@@ -363,7 +410,7 @@
                                             </div>
                                             <button data-tour="360-tour/index.html" class="btn-tour">3D-тур</button>
                                         </div>
-                                        <a href="apartment.html" class="content">
+                                        <a href="apartment.html" class="office-content">
                                             <h3 class="title">Название кабинета</h3>
                                             <ul class="features apartment-features">
                                                 <li class="square">10 м2</li>
@@ -378,7 +425,7 @@
                                 </li>
                                 <li class="item">
                                     <div class="inner">
-                                        <div class="images">
+                                        <div class="office-images apartment-images">
                                             <div class="swiper apartment-swiper">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide"><img src="img/office/Кабинет 2.1_01.webp" alt="office" loading="lazy" width="500" height="271"></div>
@@ -391,7 +438,7 @@
                                             </div>
                                             <button data-tour="360-tour/index.html" class="btn-tour">3D-тур</button>
                                         </div>
-                                        <a href="apartment.html" class="content">
+                                        <a href="apartment.html" class="office-content">
                                             <h3 class="title">Название кабинета</h3>
                                             <ul class="features apartment-features">
                                                 <li class="square">8 м2</li>

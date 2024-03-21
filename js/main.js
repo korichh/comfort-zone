@@ -103,11 +103,11 @@ const main = function () {
     }
 
     if (apartment) {
-        const swiperSelector = apartment.querySelector('.images .swiper-top')
+        const swiperSelector = apartment.querySelector('.apartment-images .swiper-top')
         const swiperPagination = swiperSelector.querySelector('.swiper-pagination')
         const swiperNext = swiperSelector.querySelector('.swiper-button-next')
         const swiperPrev = swiperSelector.querySelector('.swiper-button-prev')
-        const thumbsSelector = apartment.querySelector('.images .swiper-thumbs')
+        const thumbsSelector = apartment.querySelector('.apartment-images .swiper-thumbs')
 
         const thumbs = new Swiper(thumbsSelector, {
             spaceBetween: 15,
@@ -149,7 +149,7 @@ const main = function () {
         initPicker(bookingDateInput)
 
         calendar.addEventListener('click', (e) => {
-            if (e.target.closest('.grid button:not([data-disabled])')) {
+            if (e.target.closest('.calendar-grid button:not([data-disabled])')) {
                 booking.classList.add('_active')
                 document.body.classList.add('_lock')
             } else if (e.target.closest('.tab-nav button')) {
@@ -177,8 +177,8 @@ const main = function () {
             const tooltip = calendar.querySelector('.tooltip')
 
             calendar.addEventListener('mouseover', (e) => {
-                if (e.target.closest('.grid span') || e.target.closest('.grid button[data-disabled]')) {
-                    const target = e.target.closest('.grid span') || e.target.closest('.grid button[data-disabled]')
+                if (e.target.closest('.calendar-grid span') || e.target.closest('.calendar-grid button[data-disabled]')) {
+                    const target = e.target.closest('.calendar-grid span') || e.target.closest('.calendar-grid button[data-disabled]')
                     const title = target.getAttribute('data-title')
                     if (!title) return
                     const top = target.getBoundingClientRect().top + target.offsetHeight
@@ -192,7 +192,7 @@ const main = function () {
             })
 
             calendar.addEventListener('mouseout', (e) => {
-                if (e.target.closest('.grid span') || e.target.closest('.grid button[data-disabled]')) {
+                if (e.target.closest('.calendar-grid span') || e.target.closest('.calendar-grid button[data-disabled]')) {
                     tooltip.classList.remove('_active')
                 }
             })

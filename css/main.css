@@ -382,10 +382,10 @@ html {
     color: #fff;
     font-size: 14px;
 }
-.images {
+.apartment-images {
     position: relative;
 }
-.images .btn-tour {
+.apartment-images .btn-tour {
     position: absolute;
     z-index: 1;
     top: 15px;
@@ -405,10 +405,10 @@ html {
         box-shadow 0.3s ease,
         background-color 0.3s ease;
 }
-.images .btn-tour:hover {
+.apartment-images .btn-tour:hover {
     background: #e8e8e8;
 }
-.images .btn-tour:active {
+.apartment-images .btn-tour:active {
     transform: translate(2px, 2px);
     box-shadow: 0px 0px 0 0px #c2c2c2;
 }
@@ -535,7 +535,7 @@ html {
     .main {
         padding-top: 80px;
     }
-    .images .btn-tour {
+    .apartment-images .btn-tour {
         top: 12px;
         left: 12px;
         padding: 8px 13px;
@@ -986,22 +986,22 @@ html {
     align-items: center;
     justify-content: space-between;
 }
-.hero .content {
+.hero-content {
     flex: 0 1 50%;
     display: flex;
     flex-direction: column;
     margin-right: 15px;
 }
-.hero .content h1 {
+.hero-content h1 {
     font-size: 50px;
     line-height: 1.2;
 }
-.hero .content span {
+.hero-content span {
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 20px;
 }
-.hero .content p {
+.hero-content p {
     font-size: 16px;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -1051,7 +1051,7 @@ html {
     margin-right: 10px;
     margin-bottom: 10px;
 }
-.hero .circle {
+.hero-circle {
     flex: 0 1 50%;
     margin: 0 40px 0 20px;
     position: relative;
@@ -1123,10 +1123,10 @@ html {
 }
 
 @media (max-width: 1199.98px) {
-    .hero .content h1 {
+    .hero-content h1 {
         font-size: 45px;
     }
-    .hero .content p {
+    .hero-content p {
         font-size: 16px;
     }
     .hero .card {
@@ -1141,18 +1141,18 @@ html {
     }
 }
 @media (max-width: 991.98px) {
-    .hero .content h1 {
+    .hero-content h1 {
         font-size: 40px;
     }
     .hero {
         padding: 40px 0;
     }
-    .hero .content {
+    .hero-content {
         flex: 1 1 55%;
         max-width: 480px;
         width: 100%;
     }
-    .hero .circle {
+    .hero-circle {
         flex: 1 1 45%;
         margin: 0;
         margin-left: 30px;
@@ -1188,16 +1188,16 @@ html {
         flex-direction: column;
         align-items: stretch;
     }
-    .hero .content {
+    .hero-content {
         flex: 1 1 100%;
         width: 100%;
         align-self: flex-start;
         margin: 0;
     }
-    .hero .content h1 {
+    .hero-content h1 {
         font-size: 35px;
     }
-    .hero .circle {
+    .hero-circle {
         flex: 1 1 100%;
         width: 100%;
         margin: 0;
@@ -1227,7 +1227,7 @@ html {
     }
 }
 @media (max-width: 499.98px) {
-    .hero .circle {
+    .hero-circle {
         margin: 0;
         margin-bottom: 100px;
     }
@@ -1281,7 +1281,7 @@ html {
     padding: 20px;
     padding-left: 30px;
 }
-.offer .item .icon {
+.offer-icon {
     min-width: 50px;
     min-height: 50px;
     max-width: 50px;
@@ -1291,7 +1291,7 @@ html {
     position: relative;
     z-index: 1;
 }
-.offer .item .icon::after {
+.offer-icon::after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -1334,7 +1334,7 @@ html {
     .offer .item {
         width: 50%;
     }
-    .offer .item .icon {
+    .offer-icon {
         min-width: 45px;
         min-height: 45px;
         max-width: 45px;
@@ -1530,7 +1530,7 @@ html {
     display: flex;
     flex-direction: column;
 }
-.office-list .images {
+.office-list .office-images {
     position: relative;
 }
 .office-list .btn-tour {
@@ -1573,7 +1573,7 @@ html {
 .office-list .inner:hover .swiper-button-next {
     opacity: 1;
 }
-.office-list .content {
+.office-list .office-content {
     padding: 20px;
     display: block;
     text-decoration: none;
@@ -1621,7 +1621,7 @@ html {
     .office-list .btn-tour {
         opacity: 1;
     }
-    .office-list .content {
+    .office-list .office-content {
         padding: 15px;
     }
     .office-list .title {
@@ -1919,17 +1919,17 @@ html {
 .apartment-inner {
     display: block;
 }
-.apartment .top {
+.apartment-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 40px;
 }
-.apartment .top .images {
+.apartment-top .apartment-images {
     width: 55%;
     padding-right: 25px;
 }
-.apartment .top .content {
+.apartment-top .apartment-content {
     width: 45%;
     padding-left: 25px;
 }
@@ -1994,7 +1994,7 @@ html {
     -o-object-fit: cover;
     object-fit: cover;
 }
-.apartment .top .btn-tour {
+.apartment-top .btn-tour {
     padding: 9px 16px;
     font-size: 18px;
 }
@@ -2031,8 +2031,8 @@ html {
 .apartment .column > .facilities li {
     padding: 8px;
 }
-.apartment .bottom .column > .features li,
-.apartment .bottom .column > .facilities li {
+.apartment-bottom .column > .features li,
+.apartment-bottom .column > .facilities li {
     width: 33.333%;
 }
 .apartment .column > .price {
@@ -2105,10 +2105,10 @@ html {
     line-height: 1.2;
 }
 @media (max-width: 1199.98px) {
-    .apartment .top .images {
+    .apartment-top .apartment-images {
         padding-right: 20px;
     }
-    .apartment .top .content {
+    .apartment-top .apartment-content {
         padding-left: 20px;
     }
 }
@@ -2119,20 +2119,20 @@ html {
     .apartment .section:not(:last-child) {
         margin-bottom: 30px;
     }
-    .apartment .top {
+    .apartment-top {
         flex-direction: column;
         margin-bottom: 0;
     }
-    .apartment .top .images {
+    .apartment-top .apartment-images {
         width: 100%;
         padding-right: 0;
         padding-bottom: 30px;
     }
-    .apartment .top .content {
+    .apartment-top .apartment-content {
         width: 100%;
         padding-left: 0;
     }
-    .apartment .top .column {
+    .apartment-top .column {
         border-bottom: 1px solid rgb(225, 226, 228);
         padding-bottom: 20px;
         margin-bottom: 20px;
@@ -2158,7 +2158,7 @@ html {
     .apartment .swiper-top {
         margin-bottom: 15px;
     }
-    .apartment .top .btn-tour {
+    .apartment-top .btn-tour {
         padding: 8px 14px;
         font-size: 17px;
     }
@@ -2184,12 +2184,12 @@ html {
     .apartment .swiper-top {
         margin-bottom: 0;
     }
-    .apartment .top .images {
+    .apartment-top .apartment-images {
         padding-bottom: 25px;
     }
 }
 @media (max-width: 499.98px) {
-    .apartment .top .btn-tour {
+    .apartment-top .btn-tour {
         padding: 8px 13px;
         font-size: 15px;
     }
@@ -2400,7 +2400,7 @@ html {
 .calendar-body {
     display: block;
 }
-.calendar-body .content {
+.calendar-content {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -2415,7 +2415,7 @@ html {
     font-size: 16px;
     line-height: 1.2;
 }
-.calendar-body .grid {
+.calendar-grid {
     background: #fff;
     padding: 6px;
     border-radius: 6px;
@@ -2650,7 +2650,7 @@ html {
         font-size: 18px;
         margin-bottom: 5px;
     }
-    .calendar-body .grid {
+    .calendar-grid {
         padding: 5px;
     }
     .calendar-body .body .column {
@@ -2713,14 +2713,14 @@ html {
 .action._active .action-inner {
     transform: translateX(0);
 }
-.action .top {
+.action-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 25px 25px 0 25px;
     margin-bottom: 30px;
 }
-.action .top .title {
+.action-top .title {
     font-size: 26px;
     line-height: 1.2;
     max-width: 240px;
@@ -2743,78 +2743,78 @@ html {
     width: 100%;
     height: 100%;
 }
-.action .form {
+.action-form {
     display: block;
     margin-bottom: 25px;
 }
-.action .form .inputs,
-.action .form .summary {
+.action-form .inputs,
+.action-form .summary {
     padding: 0 25px;
     display: flex;
     flex-direction: column;
 }
-.action .form .inputs {
+.action-form .inputs {
     border-bottom: 1px solid #b4b4b4;
     margin-bottom: 35px;
     padding-bottom: 35px;
 }
-.action .form label {
+.action-form label {
     display: flex;
     flex-direction: column;
 }
-.action .form label:not(:last-child) {
+.action-form label:not(:last-child) {
     margin-bottom: 20px;
 }
-.action .form label > span {
+.action-form label > span {
     margin-bottom: 8px;
     font-size: 16px;
     line-height: 1.2;
 }
-.action .form label > input,
-.action .form label > select {
+.action-form label > input,
+.action-form label > select {
     width: 100%;
     background-color: #fff !important;
 }
-.action .form .input-nav {
+.action-form .input-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 8px;
     margin-bottom: 0 !important;
 }
-.action .form .input-nav span,
-.action .form .input-nav a {
+.action-form .input-nav span,
+.action-form .input-nav a {
     font-size: 14px;
 }
-.action .form .input-nav span {
+.action-form .input-nav span {
     color: #696969;
 }
-.action .form .input-nav a {
+.action-form .input-nav a {
     color: #000;
 }
-.action .form .price-caption {
+.action-form .price-caption {
     font-size: 16px;
     line-height: 1.2;
     margin-bottom: 8px;
 }
-.action .form .price {
+.action-form .price {
     font-size: 36px;
     line-height: 1.2;
     margin-bottom: 20px;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
-.action .form .btns {
+.action-form .btns {
     display: flex;
     width: 100%;
 }
-.action .form .btn {
+.action-form .btn {
     width: 33.333%;
 }
-.action .form .btn-prim {
+.action-form .btn-prim {
     width: 67.777%;
     margin-right: 8px;
 }
-.action .content {
+.action-content {
     padding: 0 25px;
     margin-bottom: 25px;
     display: flex;
@@ -2823,26 +2823,26 @@ html {
     align-items: center;
     margin-top: -50px;
 }
-.action .content .avatar {
+.action-content .avatar {
     width: 100px;
     height: 100px;
     margin-bottom: 15px;
 }
-.action .content .avatar img {
+.action-content .avatar img {
     display: block;
     width: 100%;
     height: 100%;
 }
-.action .content .username {
+.action-content .username {
     font-size: 22px;
     font-weight: 700;
 }
-.action .content .links {
+.action-content .links {
     width: 100%;
     margin: 0 -5px;
     margin-top: 40px;
 }
-.action .content .links a {
+.action-content .links a {
     display: block;
     font-size: 16px;
     line-height: 1.2;
@@ -2850,15 +2850,15 @@ html {
     color: #000;
     text-decoration: none;
 }
-.action .content .links a:hover {
+.action-content .links a:hover {
     text-decoration: underline;
 }
 @media (max-width: 991.98px) {
-    .action .top {
+    .action-top {
         padding: 20px 20px 0 20px;
         margin-bottom: 20px;
     }
-    .action .top .title {
+    .action-top .title {
         font-size: 22px;
     }
     .action .close {
@@ -2867,55 +2867,184 @@ html {
         max-width: 35px;
         max-height: 35px;
     }
-    .action .form {
+    .action-form {
         margin-bottom: 20px;
     }
-    .action .form .inputs,
-    .action .form .summary {
+    .action-form .inputs,
+    .action-form .summary {
         padding: 0 20px;
     }
-    .action .form .inputs {
+    .action-form .inputs {
         margin-bottom: 30px;
         padding-bottom: 30px;
     }
-    .action .content {
+    .action-content {
         padding: 0 20px;
         margin-bottom: 20px;
         margin-top: -40px;
     }
-    .action .form label:not(:last-child) {
+    .action-form label:not(:last-child) {
         margin-bottom: 18px;
     }
-    .action .form label > span {
+    .action-form label > span {
         margin-bottom: 5px;
         font-size: 14px;
     }
-    .action .form .input-nav {
+    .action-form .input-nav {
         margin-top: 5px;
     }
-    .action .form .input-nav span,
-    .action .form .input-nav a {
+    .action-form .input-nav span,
+    .action-form .input-nav a {
         font-size: 13px;
     }
-    .action .form .price-caption {
+    .action-form .price-caption {
         font-size: 14px;
         margin-bottom: 5px;
     }
-    .action .form .price {
+    .action-form .price {
         font-size: 34px;
         margin-bottom: 15px;
     }
-    .action .content .avatar {
+    .action-content .avatar {
         width: 90px;
         height: 90px;
         margin-bottom: 10px;
     }
-    .action .content .links {
+    .action-content .links {
         margin-top: 25px;
     }
 }
 @media (max-width: 399.98px) {
     .action-inner {
         max-width: 100%;
+    }
+}
+
+.content {
+    padding: 25px 0;
+}
+.content .content-inner {
+    font-size: 16px;
+    line-height: 1.25;
+}
+.content .content-inner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.content .content-inner h2,
+.content .content-inner h3,
+.content .content-inner h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.content .content-inner h2 {
+    font-size: 2em;
+}
+.content .content-inner h3 {
+    font-size: 1.5em;
+}
+.content .content-inner h4 {
+    font-size: 1.2em;
+}
+.content .content-inner p,
+.content .content-inner ul,
+.content .content-inner ol {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.content .content-inner a {
+    color: #0079a7;
+}
+@media (max-width: 991.98px) {
+    .content {
+        padding: 20px 0;
+    }
+    .content .content-inner h1 {
+        font-size: 2.3em;
+    }
+    .content .content-inner h2 {
+        font-size: 1.8em;
+    }
+    .content .content-inner h3 {
+        font-size: 1.4em;
+    }
+    .content .content-inner h4 {
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 767.98px) {
+    .content .content-inner h1 {
+        font-size: 2em;
+        margin-bottom: 18px;
+    }
+    .content .content-inner h2,
+    .content .content-inner h3,
+    .content .content-inner h4 {
+        margin-top: 18px;
+        margin-bottom: 8px;
+    }
+    .content .content-inner h2 {
+        font-size: 1.7em;
+    }
+    .content .content-inner h3 {
+        font-size: 1.3em;
+    }
+    .content .content-inner h4 {
+        font-size: 1.1em;
+    }
+    .content .content-inner p,
+    .content .content-inner ul,
+    .content .content-inner ol {
+        margin-bottom: 8px;
+    }
+}
+
+.error {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+}
+.error-inner {
+    max-width: 750px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error-inner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.error-text {
+    text-align: center;
+    line-height: 1.25;
+    padding: 0 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.error-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+.error-text p {
+    font-size: 1em;
+}
+.error-text a {
+    color: #0079a7;
+}
+@media (max-width: 991.98px) {
+    .error-text h1 {
+        font-size: 2.3em;
+    }
+}
+@media (max-width: 767.98px) {
+    .error-text h1 {
+        font-size: 2em;
+        margin-bottom: 12px;
     }
 }
