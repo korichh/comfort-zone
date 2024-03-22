@@ -1533,12 +1533,6 @@ html {
 .office-list .office-images {
     position: relative;
 }
-.office-list .btn-tour {
-    opacity: 0;
-}
-.office-list .inner:hover .btn-tour {
-    opacity: 1;
-}
 .office-list .swiper {
     width: 100%;
 }
@@ -1564,14 +1558,6 @@ html {
     left: 0;
     -o-object-fit: cover;
     object-fit: cover;
-}
-.office-list .swiper-button-prev,
-.office-list .swiper-button-next {
-    opacity: 0;
-}
-.office-list .inner:hover .swiper-button-prev,
-.office-list .inner:hover .swiper-button-next {
-    opacity: 1;
 }
 .office-list .office-content {
     padding: 20px;
@@ -2925,7 +2911,7 @@ html {
 }
 .content .content-inner {
     font-size: 16px;
-    line-height: 1.25;
+    line-height: 1.5;
 }
 .content .content-inner h1 {
     font-size: 2.5em;
