@@ -65,41 +65,54 @@
                     <button aria-label="close booking" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
                 </div>
                 <form class="action-form">
-                    <div class="inputs">
-                        <label for="kabinet" class="kabinet custom-select">
-                            <span>Выбранный кабинет:</span>
-                            <select id="kabinet" name="kabinet">
-                                <option value="kabinet1">Кабинет 1</option>
-                                <option value="kabinet2">Кабинет 2</option>
-                                <option value="kabinet3">Кабинет 3</option>
-                                <option value="kabinet4">Кабинет 4</option>
-                                <option value="kabinet5">Кабинет 5</option>
-                                <option value="kabinet6">Кабинет 6</option>
-                            </select>
-                            <span class="input-nav"><span>Ул. Шевченка 69</span><a href="apartment.html">Перейти</a></span>
-                        </label>
-                        <label for="booking-date" class="date custom-date">
-                            <span>Выбранная дата:</span>
-                            <input type="text" id="booking-date" name="booking-date" data-locale="ru">
-                        </label>
-                        <label for="booking-time" class="time custom-select">
-                            <span>Выбранное время:</span>
-                            <select id="booking-time" name="booking-time">
-                                <option value="8:00-9:00">8:00-9:00</option>
-                                <option value="8:00-9:00">8:00-9:00</option>
-                                <option value="8:00-9:00">8:00-9:00</option>
-                                <option value="8:00-9:00">8:00-9:00</option>
-                                <option value="8:00-9:00">8:00-9:00</option>
-                                <option value="8:00-9:00">8:00-9:00</option>
-                            </select>
-                        </label>
+                    <div class="booking-date">
+                        <div class="date-list booking-list">
+                            <div class="row">
+                                <span>18.03</span>
+                                <div class="office-list booking-list">
+                                    <div class="row">
+                                        <span>Кабинет 1</span>
+                                        <div class="time-list booking-list">
+                                            <div class="row"><input checked type="checkbox" name="time" value="7:00-8:00"><span>7:00-8:00</span></div>
+                                            <div class="row"><input checked type="checkbox" name="time" value="8:00-9:00"><span>8:00-9:00</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <span>Кабинет 2</span>
+                                        <div class="time-list booking-list">
+                                            <div class="row"><input checked type="checkbox" name="time" value="7:00-8:00"><span>7:00-8:00</span></div>
+                                            <div class="row"><input checked type="checkbox" name="time" value="8:00-9:00"><span>8:00-9:00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <span>19.03</span>
+                                <div class="office-list booking-list">
+                                    <div class="row">
+                                        <span>Кабинет 1</span>
+                                        <div class="time-list booking-list">
+                                            <div class="row"><input checked type="checkbox" name="time" value="7:00-8:00"><span>7:00-8:00</span></div>
+                                            <div class="row"><input checked type="checkbox" name="time" value="8:00-9:00"><span>8:00-9:00</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <span>Кабинет 2</span>
+                                        <div class="time-list booking-list">
+                                            <div class="row"><input checked type="checkbox" name="time" value="7:00-8:00"><span>7:00-8:00</span></div>
+                                            <div class="row"><input checked type="checkbox" name="time" value="8:00-9:00"><span>8:00-9:00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="summary">
+                    <div class="booking-summary">
                         <span class="price-caption">Стоимость:</span>
                         <h2 class="price">500 грн</h2>
                         <div class="btns">
                             <button type="submit" class="btn btn-prim">Забронировать</button>
-                            <button type="reset" class="btn">Отмена</button>
+                            <button type="reset" class="btn cancel-book">Отмена</button>
                         </div>
                     </div>
                 </form>

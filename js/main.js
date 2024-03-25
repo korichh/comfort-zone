@@ -1,41 +1,30 @@
-const main = function () {
-    const goTop = document.querySelector('.go-top');
-    const header = document.querySelector('.header');
-    const mobile = document.querySelector('.mobile');
-    const popup = document.querySelector('.popup');
-    const office = document.querySelector('.office');
-    const filter = document.querySelector('.office-filter');
-    const apartment = document.querySelector('.apartment');
-    const calendar = document.querySelector('.calendar');
+const main = function() {
+    const goTop = document.querySelector('.go-top')
+    const profile = document.querySelector('.action.profile')
+    const mobile = document.querySelector('.mobile')
+    const popup = document.querySelector('.popup')
+    const office = document.querySelector('.office')
+    const filter = document.querySelector('.office-filter')
+    const apartment = document.querySelector('.apartment')
+    const calendar = document.querySelector('.calendar')
 
     if (goTop) {
         const checkScroll = () => {
-            if (scrollY > 40) {
-                if (!goTop.classList.contains('_active'))
-                    goTop.classList.add('_active')
-            } else {
-                if (goTop.classList.contains('_active'))
-                    goTop.classList.remove('_active')
-            }
+            if (scrollY > 40) goTop.classList.add('_active')
+            else goTop.classList.remove('_active')
         }
 
-        document.addEventListener('scroll', checkScroll);
-        checkScroll();
+        document.addEventListener('scroll', checkScroll)
+        checkScroll()
     }
 
-    if (header) {
-        const profile = document.querySelector('.action.profile')
-
-        header.addEventListener('click', (e) => {
+    if (profile) {
+        document.addEventListener('click', (e) => {
             if (e.target.closest('[data-profile]')) {
                 e.preventDefault()
                 profile.classList.add('_active')
                 document.body.classList.add('_lock')
-            }
-        })
-
-        profile.addEventListener('click', (e) => {
-            if (profile.classList.contains('_active') && (!e.target.closest('.profile .action-inner') || e.target.closest('.profile .close'))) {
+            } else if (profile.classList.contains('_active') && (!e.target.closest('.profile .action-inner') || e.target.closest('.profile .close'))) {
                 profile.classList.remove('_active')
                 document.body.classList.remove('_lock')
             }
@@ -43,18 +32,14 @@ const main = function () {
     }
 
     if (mobile) {
-        const openNav = () => {
-            document.body.classList.add('_lock');
-            mobile.classList.add('_active')
-        }
-        const closeNav = () => {
-            document.body.classList.remove('_lock');
-            mobile.classList.remove('_active')
-        }
-
         document.addEventListener('click', (e) => {
-            if (e.target.closest('.burger')) openNav()
-            else if (mobile.classList.contains('_active') && (!e.target.closest('.mobile-inner') || e.target.closest('.mobile .close') || e.target.closest('.mobile .menu-item'))) closeNav()
+            if (e.target.closest('.burger')) {
+                mobile.classList.add('_active')
+                document.body.classList.add('_lock');
+            } else if (mobile.classList.contains('_active') && (!e.target.closest('.mobile-inner') || e.target.closest('.mobile .close') || e.target.closest('.mobile .menu-item'))) {
+                mobile.classList.remove('_active')
+                document.body.classList.remove('_lock');
+            }
         })
     }
 
@@ -74,11 +59,7 @@ const main = function () {
 
                 popup.classList.add('_active')
                 document.body.classList.add('_lock')
-            }
-        })
-
-        popup.addEventListener('click', (e) => {
-            if (popup.classList.contains('_active') && (!e.target.closest('.popup-inner') || e.target.closest('.popup .close'))) {
+            } else if (popup.classList.contains('_active') && (!e.target.closest('.popup-inner') || e.target.closest('.popup .close'))) {
                 popup.classList.remove('_active')
                 document.body.classList.remove('_lock')
             }
@@ -98,61 +79,25 @@ const main = function () {
         initPicker(dateInput)
         initPicker(timeInput, true)
 
-        filter.addEventListener('click', (e) => { if (e.target.closest('.toggle')) filter.classList.toggle('_active') })
-        document.addEventListener('click', (e) => { if (!e.target.closest('.office-filter') && !e.target.closest('.flatpickr-calendar')) filter.classList.remove('_active') })
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.office-filter .toggle')) {
+                filter.classList.toggle('_active')
+            } else if (!e.target.closest('.office-filter') && !e.target.closest('.flatpickr-calendar')) {
+                filter.classList.remove('_active')
+            }
+        })
     }
 
     if (apartment) {
         const swiperSelector = apartment.querySelector('.apartment-images .swiper-top')
-        const swiperPagination = swiperSelector.querySelector('.swiper-pagination')
-        const swiperNext = swiperSelector.querySelector('.swiper-button-next')
-        const swiperPrev = swiperSelector.querySelector('.swiper-button-prev')
         const thumbsSelector = apartment.querySelector('.apartment-images .swiper-thumbs')
 
-        const thumbs = new Swiper(thumbsSelector, {
-            spaceBetween: 15,
-            slidesPerView: 3,
-            freeMode: true,
-            watchSlidesProgress: true,
-            breakpoints: {
-                767.98: {
-                    slidesPerView: 4,
-                    spaceBetween: 25,
-                }
-            }
-        })
-
-        const swiper = new Swiper(swiperSelector, {
-            pagination: {
-                el: swiperPagination,
-                type: 'fraction'
-            },
-            navigation: {
-                nextEl: swiperNext,
-                prevEl: swiperPrev,
-            },
-            thumbs: {
-                swiper: thumbs,
-            },
-        })
+        initApartmentSwiper(swiperSelector, thumbsSelector)
     }
 
-    if (calendar) {
-        const swiperSelectors = calendar.querySelectorAll('.swiper')
-        const wWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        const dateInput = calendar.querySelector('#date')
-        const booking = document.querySelector('.action.booking')
-        const bookingDateInput = booking.querySelector('#booking-date')
-
-        initCalendarSwiper(swiperSelectors)
-        initPicker(dateInput)
-        initPicker(bookingDateInput)
-
-        calendar.addEventListener('click', (e) => {
-            if (e.target.closest('.calendar-grid button:not([data-disabled])')) {
-                booking.classList.add('_active')
-                document.body.classList.add('_lock')
-            } else if (e.target.closest('.tab-nav button')) {
+    if ('tabs') {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.tab-nav button')) {
                 const tab = e.target.closest('.tab')
                 const curBtn = e.target.closest('.tab-nav button')
                 const curCnt = tab.querySelector(`[data-id="${curBtn.getAttribute('data-for')}"]`)
@@ -165,26 +110,67 @@ const main = function () {
                 curCnt.classList.add('_active')
             }
         })
+    }
 
-        booking.addEventListener('click', (e) => {
-            if (booking.classList.contains('_active') && (!e.target.closest('.booking .action-inner') || e.target.closest('.booking .close') || e.target.closest('.booking button[type="reset"]'))) {
+    if (calendar) {
+        const booking = document.querySelector('.action.booking')
+        const calendarActions = calendar.querySelector('.calendar-actions')
+        const checks = {
+            list: [],
+            add: function(input) {
+                this.list.push(input)
+            },
+            remove: function(input) {
+                this.list.splice(this.list.indexOf(input), 1)
+            },
+        }
+
+        calendar.addEventListener('click', (e) => {
+            if (e.target.closest('.calendar-grid label')) {
+                e.preventDefault()
+                const input = e.target.closest('.calendar-grid label').querySelector('input')
+                if (!input || input.disabled) return
+
+                if (input.checked) {
+                    input.checked = false
+                    checks.remove(input)
+                } else {
+                    input.checked = true
+                    checks.add(input)
+                }
+
+                if (checks.list.length > 0) calendarActions.classList.add('_active')
+                else calendarActions.classList.remove('_active')
+            }
+        })
+
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.calendar .cont-book')) {
+                booking.classList.add('_active')
+                document.body.classList.add('_lock')
+            } else if (booking.classList.contains('_active') && (!e.target.closest('.booking .action-inner') || e.target.closest('.booking .close') || e.target.closest('.booking .cancel-book'))) {
                 booking.classList.remove('_active')
                 document.body.classList.remove('_lock')
             }
         })
 
+        const swiperSelectors = calendar.querySelectorAll('.swiper')
+        const dateInput = calendar.querySelector('#date')
+
+        initCalendarSwiper(swiperSelectors)
+        initPicker(dateInput)
+
+        const wWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         if (wWidth > 992) {
             const tooltip = calendar.querySelector('.tooltip')
 
             calendar.addEventListener('mouseover', (e) => {
-                if (e.target.closest('.calendar-grid span') || e.target.closest('.calendar-grid button[data-disabled]')) {
-                    const target = e.target.closest('.calendar-grid span') || e.target.closest('.calendar-grid button[data-disabled]')
-                    const title = target.getAttribute('data-title')
-                    if (!title) return
+                if (e.target.closest('.calendar-grid [data-title]')) {
+                    const target = e.target.closest('.calendar-grid [data-title]')
                     const top = target.getBoundingClientRect().top + target.offsetHeight
                     const left = target.getBoundingClientRect().left + (target.offsetWidth / 2)
 
-                    tooltip.textContent = title.trim()
+                    tooltip.textContent = target.getAttribute('data-title').trim()
                     tooltip.classList.add('_active')
                     tooltip.style.top = `${top}px`
                     tooltip.style.left = `${left}px`
@@ -192,9 +178,8 @@ const main = function () {
             })
 
             calendar.addEventListener('mouseout', (e) => {
-                if (e.target.closest('.calendar-grid span') || e.target.closest('.calendar-grid button[data-disabled]')) {
+                if (e.target.closest('.calendar-grid [data-title]'))
                     tooltip.classList.remove('_active')
-                }
             })
         }
     }
@@ -216,6 +201,39 @@ const main = function () {
                     prevEl: prev
                 }
             })
+        })
+    }
+
+    function initApartmentSwiper(selector, tSelector) {
+        const pagination = selector.querySelector('.swiper-pagination')
+        const next = selector.querySelector('.swiper-button-next')
+        const prev = selector.querySelector('.swiper-button-prev')
+
+        const thumbs = new Swiper(tSelector, {
+            spaceBetween: 15,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+                767.98: {
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                }
+            }
+        })
+
+        const swiper = new Swiper(selector, {
+            pagination: {
+                el: pagination,
+                type: 'fraction'
+            },
+            navigation: {
+                nextEl: next,
+                prevEl: prev,
+            },
+            thumbs: {
+                swiper: thumbs,
+            },
         })
     }
 
