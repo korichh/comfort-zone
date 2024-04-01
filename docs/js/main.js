@@ -18,7 +18,7 @@ const main = function() {
         }
         let lastScroll = scrollY
         const checkHeader = () => {
-            if (scrollY > lastScroll) header.classList.add('_active')
+            if (scrollY > 80 && scrollY > lastScroll) header.classList.add('_active')
             else header.classList.remove('_active')
             lastScroll = scrollY
         }
@@ -237,7 +237,7 @@ const main = function() {
                 }
 
                 stylize(elem, {
-                    transition: `transform 0.5s ease, opacity 0.5s ease`
+                    transition: `transform 0.7s ease, opacity 0.7s ease`
                 })
                 if (elemProps.direction === 'left' || elemProps.direction === 'right') {
                     if (elemTop <= sideAction) {
