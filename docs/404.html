@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зона Комфорта</title>
+
+    <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/flatpickr.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script defer src="js/swiper.js"></script>
+    <script defer src="js/flatpickr.js"></script>
+    <script defer src="js/flatpickr-ru.js"></script>
+    <script defer src="js/flatpickr-uk.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <div class="go-top"><a aria-label="Scroll to top" href="#"><img src="img/icons/go-top.svg" alt="icon go top" loading="lazy" width="50" height="50"></a></div>
+        <section class="popup">
+            <div class="popup-inner">
+                <div class="popup-head">
+                    <div class="title">3D-тур</div>
+                    <button aria-label="close popup" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
+                </div>
+                <div class="popup-body"></div>
+            </div>
+        </section>
+        <nav class="mobile">
+            <div class="mobile-inner">
+                <div class="top">
+                    <a href="index.html" class="logo"><img src="img/header/logo.webp" alt="logo" loading="lazy" width="239" height="86"></a>
+                    <button aria-label="close mobile" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
+                </div>
+                <ul class="menu">
+                    <li class="menu-item"><a href="office.html">Кабинеты</a></li>
+                    <li class="menu-item"><a href="content.html">Цены и оплата</a></li>
+                    <li class="menu-item"><a href="content.html">Расписание</a></li>
+                    <li class="menu-item"><a href="content.html">Правила</a></li>
+                    <li class="menu-item"><a href="content.html">О нас</a></li>
+                    <li class="menu-item"><a href="content.html">Контакты</a></li>
+                </ul>
+                <a href="tel:+380630205225" class="phone">+38 (063) 020-52-25</a>
+                <div class="social">
+                    <span><a href="#" class="telegram"></a></span>
+                    <span><a href="#" class="viber"></a></span>
+                    <span><a href="#" class="instagram"></a></span>
+                    <span><a href="#" class="fmessenger"></a></span>
+                </div>
+                <div class="lang">
+                    <span><a href="#">Українська</a></span>
+                    <span><a href="#">Русский</a></span>
+                    <span><a href="#">English</a></span>
+                </div>
+            </div>
+        </nav>
+        <section class="action booking">
+            <div class="action-inner">
+                <div class="action-top">
+                    <h2 class="title">Забронировать кабинет</h2>
+                    <button aria-label="close booking" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
+                </div>
+                <form class="action-form">
+                    <div class="booking-date">
+                        <div class="date-list booking-list">
+                            <div class="row">
+                                <span>18.03</span>
+                                <div class="office-list booking-list">
+                                    <div class="row">
+                                        <span>Кабинет 1</span>
+                                        <div class="time-list booking-list">
+                                            <div class="row"><input checked type="checkbox" name="time" value="7:00-8:00"><span>7:00-8:00</span></div>
+                                            <div class="row"><input checked type="checkbox" name="time" value="8:00-9:00"><span>8:00-9:00</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <span>Кабинет 2</span>
+                                        <div class="time-list booking-list">
+                                            <div class="row"><input checked type="checkbox" name="time" value="7:00-8:00"><span>7:00-8:00</span></div>
+                                            <div class="row"><input checked type="checkbox" name="time" value="8:00-9:00"><span>8:00-9:00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <span>19.03</span>
+                                <div class="office-list booking-list">
+                                    <div class="row">
+                                        <span>Кабинет 1</span>
+                                        <div class="time-list booking-list">
+                                            <div class="row"><input checked type="checkbox" name="time" value="7:00-8:00"><span>7:00-8:00</span></div>
+                                            <div class="row"><input checked type="checkbox" name="time" value="8:00-9:00"><span>8:00-9:00</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <span>Кабинет 2</span>
+                                        <div class="time-list booking-list">
+                                            <div class="row"><input checked type="checkbox" name="time" value="7:00-8:00"><span>7:00-8:00</span></div>
+                                            <div class="row"><input checked type="checkbox" name="time" value="8:00-9:00"><span>8:00-9:00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-summary">
+                        <span class="price-caption">Стоимость:</span>
+                        <h2 class="price">500 грн</h2>
+                        <div class="btns">
+                            <button type="submit" class="btn btn-prim">Забронировать</button>
+                            <button type="reset" class="btn cancel-book">Отмена</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="action profile">
+            <div class="action-inner">
+                <div class="action-top">
+                    <button aria-label="close booking" class="close"><img src="img/icons/close.svg" alt="icon close" loading="lazy" width="30" height="30"></button>
+                </div>
+                <div class="action-content">
+                    <div class="avatar"><img src="img/icons/profile.svg" alt="icon profile" loading="lazy" width="100" height="100"></div>
+                    <div class="username">user@name</div>
+                    <ul class="links">
+                        <li><a href="#">Мои бронирования</a></li>
+                        <li><a href="#">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <header class="header">
+            <nav class="topnav">
+                <div class="container">
+                    <div class="topnav-inner">
+                        <div class="left">
+                            <span><a href="https://www.360expert.kyiv.ua/temp/office_03_all/index.html" target="_blank" class="address">Киев, ул. Елены Телиги, 25, оф. 1, 2</a></span>
+                            <button class="select-lang">
+                                <span>Русский</span>
+                                <ul class="list">
+                                    <li><a href="#">Українська</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </button>
+                        </div>
+                        <div class="right">
+                            <span><a href="tel:+380630205225" class="phone">+38 (063) 020-52-25</a></span>
+                            <span><a href="#" class="telegram"></a></span>
+                            <span><a href="#" class="viber"></a></span>
+                            <span><a href="#" class="instagram"></a></span>
+                            <span><a href="#" class="fmessenger"></a></span>
+                            <span><a href="#" class="orders">Мои заказы</a></span>
+                            <span><a href="#" class="profile" data-profile>Личный кабинет</a></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="index.html" class="logo"><img src="img/header/logo.webp" alt="logo" loading="lazy" width="239" height="86"></a>
+                        </div>
+                        <div class="right">
+                            <ul class="menu">
+                                <li class="menu-item"><a href="office.html">Кабинеты</a></li>
+                                <li class="menu-item"><a href="content.html">Цены и оплата</a></li>
+                                <li class="menu-item"><a href="content.html">Расписание</a></li>
+                                <li class="menu-item"><a href="content.html">Правила</a></li>
+                                <li class="menu-item"><a href="content.html">О нас</a></li>
+                                <li class="menu-item"><a href="content.html">Контакты</a></li>
+                            </ul>
+                            <a aria-label="go to profile page" href="#" class="profile" data-profile></a>
+                            <button aria-label="open mobile" class="burger"><img src="img/icons/burger.svg" alt="icon burger" loading="lazy" width="40" height="40"></button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="error">
+                <div class="error-inner">
+                    <img src="img/content/404.webp" alt="error 404" width="1000" height="667">
+                    <div class="error-text">
+                        <h1>Cтраница не существует</h1>
+                        <p>Похоже, ссылка, ведущая сюда, была ошибочной. Пожалуйста, вернитесь на <a href="index.html">главную страницу</a>.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="top">
+                    <div class="container">
+                        <a href="#" class="caption">Кабинеты в Москве</a>
+                        <div class="row">
+                            <div class="column">
+                                <a href="#">Все помещения в Москве</a>
+                                <a href="#">Лофты в Москве</a>
+                                <a href="#">Спорт в Москве</a>
+                                <a href="#">Коворкинги в Москве</a>
+                                <a href="#">Бьюти в Москве</a>
+                                <a href="#">Залы в Москве</a>
+                                <a href="#">Аренда кабинета на час</a>
+                                <a href="#">Аренда кабинета на час</a>
+                                <a href="#">Кабинеты психолога в Москве</a>
+                            </div>
+                            <div class="column">
+                                <a href="#">О нас</a>
+                                <a href="#">Контакты</a>
+                                <a href="#">Каталог</a>
+                                <a href="#">Правила</a>
+                                <a href="#">Арендодателям</a>
+                            </div>
+                            <div class="column mail">
+                                <a href="#">info@delispace.ru</a>
+                                <span>вопросы и предложения</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="container">
+                        <div class="copyright">© 2024 Зона Комфорта. Почасовая аренда помещений для работы и праздников</div>
+                        <div class="row">
+                            <a href="#">Пользовательское соглашение</a>
+                            <a href="#">Политика обработки персональных данных</a>
+                            <a href="#">Карта сайта</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

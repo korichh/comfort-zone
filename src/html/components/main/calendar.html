@@ -1,0 +1,534 @@
+<section class="calendar">
+    <div class="container">
+        <div class="calendar-inner">
+            <div class="tooltip"></div>
+            <div class="calendar-actions">
+                <button class="btn btn-prim cont-book">Продолжить</button>
+                <button class="btn cancel-book">Отмена</button>
+            </div>
+            <h2 class="title title-main">Забронировать кабинет</h2>
+            <div class="calendar-tab tab">
+                @if (!context.short) {
+                <div class="tab-nav">
+                    <button class="_active" data-for="single">Кабинет 1.1</button>
+                    <button data-for="all">Все кабинеты</button>
+                </div>
+                }
+                <label for="date" class="date">
+                    <span>Перейти к дате</span>
+                    <input type="text" id="date" name="date" data-locale="ru">
+                </label>
+                @if (!context.short) {
+                <div data-id="single" class="tab-content _active">
+                    <div class="calendar-swiper">
+                        <div class="swiper apartment-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="calendar-body">
+                                        <div class="calendar-content">
+                                            <h3 class="title">Кабинет 1.1</h3>
+                                            <p class="day">18.03 - 24.03</p>
+                                        </div>
+                                        <div class="calendar-grid">
+                                            <div class="head">
+                                                <ul class="column">
+                                                    <li><label><span>Пн (18.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Вт (19.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Ср (20.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Чт (21.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Пт (22.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Сб (23.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Вс (24.03)</span></label></li>
+                                                </ul>
+                                            </div>
+                                            <div class="body">
+                                                <ul class="column">
+                                                    <li><label data-title="Время не доступно"><input disabled data-empty type="checkbox" name="time" value=""><span></span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Время не доступно"><input disabled data-empty type="checkbox" name="time" value=""><span></span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Закрыто"><input disabled type="checkbox" name="time" value=""><span>Не работает</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>18:00-18:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="calendar-body">
+                                        <div class="calendar-content">
+                                            <h3 class="title">Кабинет 1.1</h3>
+                                            <p class="day">25.03 - 31.03</p>
+                                        </div>
+                                        <div class="calendar-grid">
+                                            <div class="head">
+                                                <ul class="column">
+                                                    <li><label><span>Пн (25.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Вт (26.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Ср (27.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Чт (28.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Пт (29.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Сб (30.03)</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><span>Вс (31.03)</span></label></li>
+                                                </ul>
+                                            </div>
+                                            <div class="body">
+                                                <ul class="column">
+                                                    <li><label data-title="Время не доступно"><input disabled data-empty type="checkbox" name="time" value=""><span></span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Закрыто"><input disabled type="checkbox" name="time" value=""><span>Не работает</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Время не доступно"><input disabled data-empty type="checkbox" name="time" value=""><span></span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>18:00-18:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Время не доступно"><input disabled data-empty type="checkbox" name="time" value=""><span></span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prev">
+                                <div class="swiper-button-prev"></div>
+                                <span>11.03-<br>17.03</span>
+                            </div>
+                            <div class="next">
+                                <div class="swiper-button-next"></div>
+                                <span>01.04-<br>07.04</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+                <div data-id="all" class="@if (context.short) {_active} tab-content">
+                    <div class="calendar-swiper">
+                        <div class="swiper apartment-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="calendar-body">
+                                        <div class="calendar-content">
+                                            <h3 class="title">Сегодня, Пн</h3>
+                                            <p class="day">18.03</p>
+                                        </div>
+                                        <div class="calendar-grid">
+                                            <div class="head">
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 1</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 2</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 3</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 4</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 5</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 6</span></label></li>
+                                                </ul>
+                                            </div>
+                                            <div class="body">
+                                                <ul class="column">
+                                                    <li><label data-title="Время не доступно"><input disabled data-empty type="checkbox" name="time" value=""><span></span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Время не доступно"><input disabled data-empty type="checkbox" name="time" value=""><span></span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Закрыто"><input disabled type="checkbox" name="time" value=""><span>Не работает</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>18:00-18:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="calendar-body">
+                                        <div class="calendar-content">
+                                            <h3 class="title">Завтра, ВТ</h3>
+                                            <p class="day">19.03</p>
+                                        </div>
+                                        <div class="calendar-grid">
+                                            <div class="head">
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 1</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 2</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 3</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 4</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 5</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Ул. Шевченка 86"><span>Каб 6</span></label></li>
+                                                </ul>
+                                            </div>
+                                            <div class="body">
+                                                <ul class="column">
+                                                    <li><label data-title="Время не доступно"><input disabled data-empty type="checkbox" name="time" value=""><span></span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Закрыто"><input disabled type="checkbox" name="time" value=""><span>Не работает</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label data-title="Время не доступно"><input disabled data-empty type="checkbox" name="time" value=""><span></span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="18:00-18:55"><span>18:00-18:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="19:00-19:55"><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                                <ul class="column">
+                                                    <li><label><input type="checkbox" name="time" value="07:00-07:55"><span>07:00-07:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>08:00-08:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="09:00-09:55"><span>09:00-09:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="10:00-10:55"><span>10:00-10:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="11:00-11:55"><span>11:00-11:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="12:00-12:55"><span>12:00-12:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="13:00-13:55"><span>13:00-13:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="14:00-14:55"><span>14:00-14:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="15:00-15:55"><span>15:00-15:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="16:00-16:55"><span>16:00-16:55</span></label></li>
+                                                    <li><label><input type="checkbox" name="time" value="17:00-17:55"><span>17:00-17:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>18:00-18:55</span></label></li>
+                                                    <li><label data-title="Время забронировано"><input disabled type="checkbox" name="time" value=""><span>19:00-19:55</span></label></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prev">
+                                <div class="swiper-button-prev"></div>
+                                <span>Суббота<br>17.03</span>
+                            </div>
+                            <div class="next">
+                                <div class="swiper-button-next"></div>
+                                <span>Среда<br>20.03</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

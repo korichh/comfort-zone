@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+@include('components/page/head.html')
+
+<body>
+    <div class="page">
+        <div class="go-top"><a aria-label="Scroll to top" href="#"><img src="img/icons/go-top.svg" alt="icon go top" loading="lazy" width="50" height="50"></a></div>
+        @include('components/page/popup.html')
+        @include('components/page/mobile.html')
+        @include('components/page/action-booking.html')
+        @include('components/page/action-profile.html')
+        @include('components/page/header.html')
+        <main class="main">
+            @include('components/main/hero.html')
+            @include('components/main/offer.html')
+            @include('components/main/office.html')
+            @include('components/main/advantage.html')
+            @include('components/main/difference.html')
+        </main>
+        @include('components/page/footer.html')
+    </div>
+</body>
+
+</html>
