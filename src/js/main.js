@@ -214,7 +214,7 @@ const main = function () {
             }
         }
         const animFade = () => {
-            const sideAction = document.body.clientHeight / 1.25
+            const sideAction = document.body.clientHeight / 1.1
             const bottomAction = document.body.clientHeight / 1.1
 
             for (let i = 0; i < fadeIns.length; i++) {
@@ -345,3 +345,13 @@ const main = function () {
         })
     }
 }();
+
+document.addEventListener('click', (e) => {
+    if (e.target.closest('a')) {
+        const href = e.target.closest('a').getAttribute('href')
+        if (href.includes('#')) return
+
+        e.preventDefault()
+        window.location.href = '/comfort-zone' + href
+    }
+})

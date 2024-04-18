@@ -993,8 +993,8 @@ html {
 .mobile .close {
     background: none;
     border: none;
-    width: 28px;
-    height: 28px;
+    width: 35px;
+    height: 35px;
 }
 
 .mobile .close img {
@@ -1888,8 +1888,8 @@ html {
 .office-filter .close::before {
     content: "";
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -3907,6 +3907,9 @@ html {
 
 .time-list > .row {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .time-list > .row:last-child {
@@ -3916,26 +3919,15 @@ html {
 .time-list span {
     padding: 8px 0;
     position: relative;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
 }
 
-.time-list span::before {
-    content: "";
+.time-list img {
     display: block;
-    position: absolute;
-    z-index: 1;
-    width: 25px;
-    height: 25px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 5px;
-    background-position: right center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-image: url("../img/icons/close.svg");
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
 }
 
 .action-form .price-caption {
