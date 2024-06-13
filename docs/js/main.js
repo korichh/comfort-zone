@@ -380,12 +380,12 @@ const main = function() {
     }
 }();
 
-// document.addEventListener('click', (e) => {
-//     if (e.target.closest('a')) {
-//         const href = e.target.closest('a').getAttribute('href')
-//         if (href.includes('#')) return
+document.addEventListener('click', (e) => {
+    if (e.target.closest('a')) {
+        const href = e.target.closest('a').getAttribute('href')
+        if (href.includes('#')) return
 
-//         e.preventDefault()
-//         window.location.href = '/comfort-zone' + href
-//     }
-// })
+        e.preventDefault()
+        window.location.href = '/comfort-zone' + href
+    }
+})
