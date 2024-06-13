@@ -263,6 +263,28 @@ const main = function() {
         document.addEventListener('scroll', animFade);
     }
 
+    if ('acc') {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.acc__head')) {
+                const accWrapper = e.target.closest('.accs')
+                const acc = e.target.closest('.acc')
+                if (!accWrapper || !acc) return
+
+                if (accWrapper.classList.contains('_closable')) {
+                    const accs = accWrapper.querySelectorAll('.acc')
+                    if (acc.classList.contains('_active')) {
+                        acc.classList.remove('_active')
+                    } else {
+                        accs.forEach(el => el.classList.remove('_active'))
+                        acc.classList.add('_active')
+                    }
+                } else {
+                    acc.classList.toggle('_active')
+                }
+            }
+        })
+    }
+
     function initOfficeSwiper(selectors) {
         selectors.forEach(selector => {
             const pagination = selector.querySelector('.swiper-pagination')
@@ -358,12 +380,12 @@ const main = function() {
     }
 }();
 
-document.addEventListener('click', (e) => {
-    if (e.target.closest('a')) {
-        const href = e.target.closest('a').getAttribute('href')
-        if (href.includes('#')) return
+// document.addEventListener('click', (e) => {
+//     if (e.target.closest('a')) {
+//         const href = e.target.closest('a').getAttribute('href')
+//         if (href.includes('#')) return
 
-        e.preventDefault()
-        window.location.href = '/comfort-zone' + href
-    }
-})
+//         e.preventDefault()
+//         window.location.href = '/comfort-zone' + href
+//     }
+// })

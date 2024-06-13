@@ -3892,12 +3892,26 @@ html {
     position: relative;
 }
 
-.time-list img {
-    display: block;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
+.time-list button {
+    background: none;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 26px;
     height: 26px;
+}
+
+.time-list img {
+    display: block;
+    width: 100%;
+    height: 100%;
     -o-object-fit: contain;
     object-fit: contain;
 }
@@ -4254,4 +4268,191 @@ html {
         font-size: 2em;
         margin-bottom: 12px;
     }
+}
+
+.faq {
+    padding: 60px 0;
+}
+
+.faq__inner {
+    display: block;
+}
+
+.faq .title-main {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 991.98px) {
+    .faq {
+        padding: 40px 0;
+    }
+}
+
+.accs {
+    display: block;
+}
+
+.acc__inner {
+    display: block;
+    border-bottom: 1px solid #e8e9ec;
+}
+
+.acc__head {
+    background: none;
+    border: none;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.acc__head span,
+.acc__head h3 {
+    margin: 0 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    padding: 15px 10px 15px 0 !important;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.acc__head:hover span,
+.acc__head:hover h3 {
+    color: #317a96;
+}
+
+.acc__head .icon-arrow {
+    display: block;
+    min-width: 20px;
+    min-height: 20px;
+    width: 20px;
+    height: 20px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.acc__head .icon-arrow::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/icons/arrow.svg");
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.acc._active .acc__head .icon-arrow {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.acc._active .acc__head h3,
+.acc._active .acc__head span {
+    color: #317a96;
+}
+
+.acc__body {
+    height: 0;
+    overflow: hidden;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+    transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.acc__body>div {
+    padding: 15px 0;
+}
+
+.acc__body>div>* {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.acc__body>div>*:first-child {
+    margin-top: 0;
+}
+
+.acc__body>div>*:last-child {
+    margin-bottom: 0;
+}
+
+.acc__body>div>h3 {
+    font-size: 18px;
+}
+
+.acc__body>div>h4 {
+    font-size: 16px;
+}
+
+.acc__body>div>ol,
+.acc__body>div>ul {
+    counter-reset: mark;
+    padding: 0;
+}
+
+.acc__body>div>ol li,
+.acc__body>div>ul li {
+    counter-increment: mark;
+    position: relative;
+    list-style: none;
+    padding: 4px 0;
+    margin: 4px 0;
+    padding-left: 32px;
+}
+
+.acc__body>div>ol li::before,
+.acc__body>div>ul li::before {
+    content: "0" counter(mark);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+    color: #317a96;
+    border: 2px solid #317a96;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.acc__body>div>ol li:nth-child(n+10)::before,
+.acc__body>div>ul li:nth-child(n+10)::before {
+    content: counter(mark);
+}
+
+.acc._active .acc__body {
+    height: auto;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
 }
